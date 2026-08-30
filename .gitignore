@@ -1,0 +1,7 @@
+# Local generation drafts and selection state. README showcase assets live in docs/assets/readme/.
+output/
+state/
+
+# OS/editor artifacts
+.DS_Store
+Thumbs.db

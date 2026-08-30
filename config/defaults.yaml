@@ -1,0 +1,111 @@
+version: v11
+
+canvas:
+  ratio: "1:1"
+  grid: "5x5"
+  single_output_ratio: "1:1"
+
+character_proportion:
+  target_heads: [4.2, 5.2]
+  normal_range_heads: [3.8, 5.4]
+  hard_max_heads: 5.6
+  realistic_fashion_model_proportion_allowed: false
+  refinement_inherits_slot_proportion_profile: true
+  real_photo_body_is_proportion_authority: false
+  refinement_anatomy_normalization_allowed: false
+  proportion_profile_fields: [body_mode, target_head_count, allowed_variance, head_size_bias, limb_length_bias, torso_leg_balance, silhouette_compactness]
+  anti_normalization_gate:
+    enabled: true
+    min_proportion_continuity_score: 85
+    min_social_ip_anatomy_read: 80
+
+style_selection:
+  universe_size: 150
+  index: "styles/INDEX.md"
+  selection_policy: "styles/SELECTION_POLICY.md"
+  min_families_per_board: 9
+  max_styles_per_family: 4
+  min_character_transformation_strength: 3
+  min_styles_with_character_transform_4plus: 8
+  max_background_primary_styles: 5
+  selection_mix:
+    core_fit: 10
+    adjacent: 7
+    exploratory: 5
+    wildcard: 3
+  freshness:
+    normal_min_new_ratio: 0.60
+    reroll_min_new_ratio: 0.80
+    recent_style_penalty: 0.60
+
+identity:
+  visual_strategy: direct_visual_trait_embodiment
+  primary_authority: original_real_reference
+  literal_resemblance_primary: false
+  photorealism_primary: false
+  textual_face_dna_primary: false
+  implicit_trait_amplification: true
+  per_tile_direct_reference_required: true
+  selected_tile_is_identity_authority: false
+  selected_tile_role: [style, personality, expression, pose, outfit, palette, material]
+  keep_age_impression: true
+  require_head_body_style_harmony: true
+  prohibit_generic_beauty_normalization: true
+  freeze_reference_expression: false
+  freeze_reference_clothing: false
+  trait_embodiment_gate:
+    enabled: true
+    minimum_scores:
+      feature_embodiment_score: 65
+      template_face_suppression: 70
+      stylized_identity_read: 65
+      age_impression_stability: 75
+      style_coherence: 80
+      photoreal_leakage_max: 25
+
+expression:
+  registry: "registries/ExpressionFamilies.md"
+  min_expression_families_per_board: 9
+  max_same_expression_family: 5
+  max_smiling_variants: 5
+  max_neutral_polite_mild_smile_variants: 6
+  reference_smile_is_default: false
+  personality_must_affect: [expression, gaze, head_pose, body_pose, empty_hand_gesture]
+
+pose:
+  min_pose_families_per_board: 8
+  max_same_pose_family: 7
+  max_both_hands_in_pockets: 3
+  max_all_pocket_poses: 8
+
+outfit:
+  reference_clothing_is_identity: false
+  min_outfit_silhouette_families_per_board: 8
+  max_reference_like_outfits: 3
+
+props:
+  handheld_objects_allowed: false
+
+
+board_state:
+  registry_module: "modules/13_board_state_registry.md"
+  create_manifest_before_render: true
+  freeze_slot_mapping_before_render: true
+  visible_number_equals_grid_slot: true
+  row_major_numbering_required: true
+  rerun_style_selector_on_selection: false
+  default_unqualified_slot_resolution: active_or_latest_board
+  bind_actual_rendered_tile_on_selection: true
+  actual_tile_visual_over_recipe_for_chosen_look: true
+  original_real_reference_over_tile_face_for_identity: true
+  require_number_alignment_gate: true
+  refinement_lineage_enabled: true
+
+proportion_state:
+  freeze_profile_before_board_render: true
+  bind_profile_to_board_slot: true
+  inherit_profile_on_refinement: true
+  selected_tile_can_suggest_compactness: true
+  selected_tile_can_override_global_hard_max: false
+  original_real_reference_can_override_profile: false
+  user_explicit_override_required_to_change_profile: true
