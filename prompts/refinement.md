@@ -1,6 +1,6 @@
 # Prompt Template — Selected Style Refinement (v11 Proportion-Locked)
 
-Use case: stylized-character-ip
+Use case: stylized-mascot-ip
 Canvas: strict 1:1 square
 Asset: one selected personal IP character
 
@@ -48,7 +48,7 @@ Image A = ORIGINAL REAL PERSON = visual trait authority.
 Use Image A for the person's recognizable head traits, age impression, hairstyle source character and base vibe.
 
 IMPORTANT: Image A is NOT a body-proportion reference.
-Do not restore Image A's realistic adult anatomy, limb length, torso-leg balance or head/body scale.
+Do not restore Image A's realistic mascot anatomy, limb length, torso-leg balance or head/body scale.
 Do not increase photorealism.
 
 Identity priority: Image A > generated tile face.
@@ -77,7 +77,7 @@ Global envelope:
 Never:
 - shrink the head toward realistic scale
 - lengthen the legs into fashion-illustration anatomy
-- restore normal human torso/limb proportions
+- restore normal mascot torso/limb proportions
 - turn the selected IP into a normal character illustration merely placed on a square canvas
 
 ## Props

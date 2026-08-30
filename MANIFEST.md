@@ -1,4 +1,4 @@
-# Manifest — v11
+# Manifest — v12
 
 Core:
 - SKILL.md
@@ -26,6 +26,7 @@ Modules:
 Prompts:
 - prompts/25grid_visual.md
 - prompts/25grid_persona_only.md
+- prompts/25grid_human.md
 - prompts/refinement.md
 
 Registries:

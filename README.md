@@ -1,67 +1,66 @@
-# 一张照片 / 一个账号，变成你的 IP ✨
+# Mascot IP Prompt Studio V11
 
-先看 25 个角色方向，再选一个放大。不会画画也能玩。
+这是一个把你提供的 **Human Character IP Skill 的风格应用机制 1:1 移植到 Mascot 场景** 的版本。
 
-## 先安装 👇
+## 这版的目标
 
-把**这个 GitHub 仓库链接**丢给 Codex，然后说：
+不是继续微调旧版 Mascot Skill，而是把“人物 IP Skill 里风格为什么更容易拉开”的那整套机制，直接照搬到拟人化 Mascot IP：
 
-```text
-安装这个 Skill
-```
+- `Style Universe Index`
+- `Dynamic Style Selector`
+- `Selection Policy`
+- `Family Recipe`
+- `Progressive Disclosure`
+- `Board Manifest / Slot Binding`
+- `One-Shot 25 Grid Generation`
 
-安装完成后，直接在 Codex 里使用。
+## 这版和人物 Skill 一样的地方
 
-## 怎么玩 🪄
+### 1. 先读 INDEX，再选 25 个 Style ID
+不是一上来把 150 条风格全塞进 Prompt，而是：
 
-1. 丢给 Codex 任何它能理解的输入：照片、账号链接、本地文件夹、文件，或直接一句需求。
-2. 看 25 个角色方向。
-3. 回复编号，例如：`放大 15`。
+1. 读取 `styles/INDEX.md`
+2. 先选 25 个 canonical style IDs
+3. 只读取对应 family files
+4. 提取完整 recipe
+5. 再编译 25 格 prompt
 
-```text
-为这个参考图设计 IP
-```
+### 2. 选风格的 Mix 一模一样
+- 10 Core Fit
+- 7 Adjacent
+- 5 Exploratory
+- 3 Wildcard
 
-```text
-https://x.com/你的账号
-为这个账号设计人物 IP
-```
+### 3. Style 是真正的 Recipe，不是一个名字
+每个 style 都有完整定义，例如：
+- visual thesis
+- line / edge
+- palette logic
+- shading
+- material / texture
+- dimensionality
+- finish
+- transformation strength
+- anti-collapse
 
-```text
-为 E:\你的文件夹 设计 IP
-```
+### 4. Board Manifest 机制一模一样
+先冻结 `board_id + slot 01–25 + style_recipe_snapshot`，再一次生图。生图后不允许重新排序。
 
-```text
-我想要一个适合做 AI 内容的成年女性角色，干净、有一点酷
-```
+## 和人物 Skill 不一样、但已做 Mascot 化适配的地方
 
-## 账号 → IP
+- 把 `Human / Adult / Personal IP` 改成 `Mascot / Sidekick / Account Mascot Universe`
+- style 保留“应用方式”，但字段改成适合 mascot：
+  - `sidekick_fit`
+  - `character_rendering_mode`
+  - `body_topology_window`
+  - `costume_transformation_strength`
+- 强调：
+  - 25 格是 **25 个独立 mascot 候选**，不是同一个人跨 25 种风格
+  - style 只负责 **怎么画**，不负责决定人格
+  - personality / pose / carrier 仍然是上游冻结变量
 
-输入：[@yang02010](https://x.com/yang02010)
+## 你这版重点想看的
 
-![AutoTask 的 25 个角色方向](docs/assets/readme/autotask-board.png)
+这版最重要的不是最终内容质量，而是看：
 
-选 `15` 👇
-
-![AutoTask 15 号放大角色](docs/assets/readme/autotask-final.png)
-
-## 照片 → IP
-
-原图 👇
-
-![女性角色原始参考图](docs/assets/readme/female-reference.jpg)
-
-25 个方向 👇
-
-![女性角色的 25 个方向](docs/assets/readme/photo-board.png)
-
-选 `01` 👇
-
-![女性角色 01 号放大角色](docs/assets/readme/photo-final.png)
-
-## 两个小原则 ✅
-
-- 照片负责头部特征和气质，不照搬衣服、姿势或真人比例。
-- “放大”是重新画角色，保留你选中的 IP 比例，不会变成普通立绘。
-
-样图均为设计草案，喜欢哪一格就继续改哪一格。
+> **把人物 Skill 那套 Style 应用系统原封不动地迁到 Mascot 后，25 宫格的画风拉开程度会不会明显变好。**

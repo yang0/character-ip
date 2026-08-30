@@ -1,10 +1,10 @@
 # Module 03 — Persona-Only Mode
 
 ## Trigger
-没有清晰真人身份图，但存在账号 / 文件 / Bio / 内容信息。
+没有清晰参考角色身份图，但存在账号 / 文件 / Bio / 内容信息。
 
 ## Goal
-生成“像这个账号人格”的 Human IP，而不是虚构真人相似度。
+生成“像这个账号人格”的 Mascot IP，而不是虚构参考角色相似度。
 
 ## Extract
 - account role
@@ -27,7 +27,7 @@
 - palette tendency
 
 ## Expression Rule
-不要默认生成“友好微笑账号人物”。
+不要默认生成“友好微笑账号角色”。
 
 Base Persona 必须进一步编译为：
 - expression families

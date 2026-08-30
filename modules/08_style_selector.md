@@ -1,11 +1,14 @@
-# Module 08 — Dynamic Style Selector v11
+# Mascot Port Note
+本模块保留 Human Skill 的 Style Selector 逻辑，仅把输入/输出语境改为 Mascot。
+
+# Module 08 — Carrier Plan + Dynamic Style Selector v13
 
 ## Input
 - User persona
-- personal aesthetic
+- platform aesthetic
 - content role
 - visual identity availability
-- recent board history
+- `design_context`；仅 `CONTINUATION` 可读取用户点名的单个 Board
 - `styles/INDEX.md`
 
 ## Output
@@ -48,9 +51,27 @@
 - >=1 stylized 3D or digital-native
 
 ## Freshness
-If previous board exists:
-- normal next board: >=60% new styles
-- “再来一批”: >=80% new styles
+
+- `FRESH_DESIGN`：不读取任何历史 Board；只做本轮的风格、carrier 与构图多样性。
+- `CONTINUATION`：仅对用户点名 Board 比较，至少 80% new canonical style IDs。
+
+## Carrier Plan — P0
+
+在选择 style 之前冻结 25 个 carrier entry。仅适用于 `MASCOT`：
+
+```yaml
+carrier_plan:
+  '01':
+    carrier_species: string
+    carrier_family: string
+    carrier_archetype: string
+    carrier_rationale: string
+```
+
+- `carrier_species` 必须 25 格唯一。
+- `carrier_family` 必须 25 格唯一，用来阻止近缘替换伪装成新物种。
+- 不能用颜色、机械、职业或形态修饰词绕过重复：red fox/fox、robot turtle/turtle、flying squirrel/squirrel 均按同一族群处理。
+- `CONTINUATION` 还必须相对点名 Board 至少 80% carrier families 新增；`FRESH_DESIGN` 禁止读取历史作比较。
 
 ## Progressive Disclosure
 1. read INDEX only
@@ -72,9 +93,10 @@ If previous board exists:
 Style Selector 的输出不能直接临时塞进生图 Prompt 后丢弃。
 
 选择完 25 个 Style 后必须：
-1. 分配固定 `grid_slot 01–25`
-2. 写入 `board_id` 对应的 Frozen Board Manifest
-3. 为每个 slot 保存 Style Recipe Snapshot，而不仅是 style_id
-4. 再把同一个 Manifest 按 01→25 顺序交给 One-Shot Grid Generator
+1. 先冻结并验证 Carrier Plan。
+2. 分配固定 `grid_slot 01–25`。
+3. 写入 run-scoped Frozen Board Manifest。
+4. 为每个 slot 保存 Carrier Plan、Style Recipe Snapshot，而不仅是 style_id。
+5. 再把同一个 Manifest 按 01→25 顺序交给 One-Shot Grid Generator。
 
 Board 一旦进入渲染阶段，slot 映射不可重新排序。

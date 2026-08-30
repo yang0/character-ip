@@ -2,7 +2,7 @@
 
 ## 1. P0 — Square Is Canvas + Anatomy
 
-所有标准个人 IP 资产默认：
+所有标准Mascot IP 资产默认：
 
 `1:1 square`
 
@@ -17,15 +17,15 @@
 - square canvas
 - visibly stylized social-IP anatomy
 
-如果角色恢复为普通成人立绘 / 时尚模特人体，即使画布是 1:1，也属于 FAIL。
+如果角色恢复为普通吉祥物立绘 / 时尚模特人体，即使画布是 1:1，也属于 FAIL。
 
 ---
 
-## 2. P0 — Social-IP Anatomy, Not Human Model Anatomy
+## 2. P0 — Social-IP Anatomy, Not Mascot Model Anatomy
 
 默认目标：
 
-> stylized adult social character
+> stylized mascot sidekick character
 
 不是：
 
@@ -44,7 +44,7 @@
 
 > quality gate fail
 
-除非用户明确要求真人 / 模特比例，任何 Style Recipe、Editorial、Fashion、Webtoon、精修指令都无权突破。
+除非用户明确要求参考角色 / 模特比例，任何 Style Recipe、Editorial、Fashion、Webtoon、精修指令都无权突破。
 
 ---
 
@@ -52,7 +52,7 @@
 
 选号后的单张 refinement 常见错误：
 
-`small grid IP → high-resolution refinement → normal adult illustration proportion`
+`small grid IP → high-resolution refinement → normal mascot illustration proportion`
 
 这是禁止的。
 
@@ -107,7 +107,7 @@ proportion_profile:
 - hairstyle / head character
 - base vibe
 
-**绝不能用真人照片的身体作为单张 IP 的比例参考。**
+**绝不能用参考角色照片的身体作为单张 IP 的比例参考。**
 
 ### Selected Rendered Tile
 负责：
@@ -159,7 +159,7 @@ proportion_profile:
 
 ## 7. Head Presence
 
-标准人物必须具有明显 IP 感：
+标准角色必须具有明显 IP 感：
 - head visibly larger than realistic anatomy
 - torso and limbs compact enough for square social-media readability
 - full body readable at thumbnail scale
@@ -179,12 +179,12 @@ proportion_profile:
 - 轮廓更有 IP 感
 
 同时通过：
-- 成人眉眼
-- 成人肩颈
-- 成人服装
-- 成人表情
-- 成人姿态
+- 吉祥物眉眼
+- 吉祥物肩颈
+- 吉祥物服装
+- 吉祥物表情
+- 吉祥物姿态
 
 维持年龄感。
 
-禁止用恢复真人比例来表达“成熟”。
+禁止用恢复参考角色比例来表达“成熟”。

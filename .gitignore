@@ -1,6 +1,10 @@
 # Local generation drafts and selection state. README showcase assets live in docs/assets/readme/.
 output/
+outputs/
 state/
+scweet_state.db
+__pycache__/
+*.pyc
 
 # OS/editor artifacts
 .DS_Store

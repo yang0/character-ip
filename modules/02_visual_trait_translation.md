@@ -2,9 +2,9 @@
 
 ## 1. Purpose
 
-当存在清晰真人参考图时，本模块负责让模型直接看参考图，理解这个人的整体头部特征、年龄感和气质，再把这些人物特征完整翻译进目标画风。
+当存在清晰参考角色参考图时，本模块负责让模型直接看参考图，理解这个人的整体头部特征、年龄感和气质，再把这些角色特征完整翻译进目标画风。
 
-本模块不追求“真人脸复制”。
+本模块不追求“参考角色脸复制”。
 
 核心：
 
@@ -14,21 +14,21 @@
 
 ## 2. P0 — Direct Visual Reference
 
-每一次生图都必须重新直接参考原始真人图。
+每一次生图都必须重新直接参考原始参考角色图。
 
 ### 25 宫格
-25 个格子都把原始真人图视为自己的直接 visual trait source。
+25 个格子都把原始参考角色图视为自己的直接 visual trait source。
 
 禁止：
 - 01 的生成脸变成 02–25 的脸部母版
 - 用生成后的通用卡通脸继续推导
-- 把某个 style template 当作人物身份源
+- 把某个 style template 当作角色身份源
 
 ### 选号后的单张定稿
-必须再次引入原始真人图。
+必须再次引入原始参考角色图。
 
 此时：
-- 原始真人图 = person traits / age / vibe reference
+- 原始参考角色图 = person traits / age / vibe reference
 - 选中宫格 = style / personality / pose / outfit direction
 
 ---
@@ -36,9 +36,9 @@
 ## 3. Trait Embodiment, Not Literal Copy
 
 直接从参考图整体读取并体现：
-- whole-head character
+- whole-character character
 - face-shape tendency
-- head/face proportion character
+- head/body proportion character
 - hairstyle architecture and volume
 - facial relationship character
 - age impression
@@ -57,7 +57,7 @@
 
 但不能：
 - 被通用模板脸替代
-- 为了提高相似度增加真人质感
+- 为了提高相似度增加参考角色质感
 
 ---
 
@@ -100,10 +100,10 @@
 必须保持原参考图的年龄感。
 
 允许：
-- adult chibi
-- adult doodle
-- adult pixel
-- adult sticker
+- mascot chibi
+- mascot doodle
+- mascot pixel
+- mascot sticker
 
 禁止：
 - 大头 = 儿童
@@ -114,7 +114,7 @@
 
 ## 7. Reference Expression / Clothing Are Not Frozen
 
-真人参考图负责人物特征，不默认锁定：
+参考角色参考图负责角色特征，不默认锁定：
 - source smile
 - source neutral face
 - source body pose
@@ -141,11 +141,11 @@ Trait embodiment 与 photorealism 完全独立。
 
 ## 9. Trait Embodiment Check
 
-生成后直接看结果是否成功体现人物特征，而不是检查是否像照片。
+生成后直接看结果是否成功体现角色特征，而不是检查是否像照片。
 
 检查：
 1. 头部整体有没有这个人的味道
-2. 脸型/五官关系是否体现人物趋势而不是 style default
+2. 脸型/五官关系是否体现角色趋势而不是 style default
 3. 发型是否有来源感
 4. 年龄感是否稳定
 5. 基础气质是否仍可识别
@@ -153,4 +153,4 @@ Trait embodiment 与 photorealism 完全独立。
 7. 是否保持目标画风统一
 
 如果结果只是“一个好看的通用角色”：FAIL。
-如果结果为了相似而变成半真人：FAIL。
+如果结果为了相似而变成半参考角色：FAIL。

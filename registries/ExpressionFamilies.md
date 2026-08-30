@@ -91,5 +91,5 @@
 - 每轮 25 格至少覆盖 9 个 Expression Families。
 - 任一 Expression Family 最多 5 格。
 - 明显微笑 / 甜笑 / 礼貌笑合计最多 5 格。
-- 不得因真人参考图在笑而把 smile 作为默认表达。
+- 不得因参考角色参考图在笑而把 smile 作为默认表达。
 - 人格必须通过 expression + gaze + head pose + body pose 被看见。

@@ -1,7 +1,7 @@
 # Dynamic Style Selection Policy — v10
 
 ## 1. Goal
-从 `S001–S150` 中，为当前用户动态挑选 25 个真正有差异、适配度高、人物本体变化明显的方向。
+从 `S001–S150` 中，为当前用户动态挑选 25 个真正有差异、适配度高、角色本体变化明显的方向。
 
 ## 2. Selection Mix
 默认：
@@ -16,11 +16,11 @@
 `Score = 42% User Fit + 23% Novelty + 15% Cross-Family Diversity + 10% Social/Meme Potential + 5% Character Transformation + 5% Surprise`
 
 ## 4. Character-First Transformation
-风格差异必须主要落在人物身上。
+风格差异必须主要落在角色身上。
 
 轻量索引中的：
 - `Char Δ` = character_transformation_strength
-- `Outfit Δ` = outfit_transformation_strength
+- `Outfit Δ` = costume_transformation_strength
 - `Expr Cap` = expression_capacity
 
 每轮要求：
@@ -62,18 +62,21 @@ Style Selector 不直接决定人格，但应避免 25 个都属于“只能做�
 
 让 Expression Engine 有足够视觉空间。
 
-## 8. Freshness
-存在上一轮 Board 时：
+## 8. Design Context and Freshness
 
-### 普通重新探索
-至少 `60%` canonical style IDs 不重复。
+先按 Module 01 确定 `design_context`，再决定是否允许读取历史：
 
-### 用户说“再来一批 / 换一批 / 新鲜点”
-至少 `80%` canonical style IDs 不重复。
+### FRESH_DESIGN
 
-### Recently Used Penalty
-最近使用过的 style：
-`score *= 0.40`
+- 新会话、`重新设计 / 重新做 / 从头设计 / 再来一批`、或未明确点名旧 Board 的新候选请求，均为 `FRESH_DESIGN`。
+- 禁止读取、枚举或引用旧 Board、历史 style、历史 carrier 或输出图片。
+- 因此不做跨历史 style freshness；只执行本轮 25 格的风格、表达、姿态、服装与 carrier 多样性。
+
+### CONTINUATION
+
+- 只有用户明确点名旧 Board/slot/图片并要求继续、精修或修改时才成立。
+- 只可读取该一个 Board；新 Board 至少 `80%` canonical style IDs 不重复。
+- 不得扫描其他历史 Board，也不得从未点名的选择记录推断用户偏好。
 
 ## 9. User Preference Learning
 用户选择某格后，可更新：

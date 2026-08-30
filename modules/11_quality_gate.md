@@ -1,4 +1,26 @@
-# Module 11 — Quality Gate v11
+# Module 11 — Quality Gate v13
+
+## Gate -1 — Design Context and History Isolation — P0
+
+- 每个新 Manifest 必须有 `design_context`、`run_id`、`history_access`。
+- `FRESH_DESIGN`：Board ID 必须为 `B001`，Manifest 与输出必须位于该 `run_id` 的隔离目录，且 `history_access == none`。任何历史读取或引用都是 FAIL。
+- `CONTINUATION`：`history_access` 必须记录用户明确点名的单个 Board；不得依赖未点名 Board。
+
+## Gate -0 — Mascot Carrier Diversity — P0
+
+适用于 `MASCOT`：
+
+- 25 格都有 non-empty `carrier_species`、`carrier_family`、`carrier_archetype`、`carrier_rationale`。
+- 25 个 species 与 25 个 family 都唯一；近缘或修饰命名重复即 FAIL。
+- `CONTINUATION` Board 相比点名 Board，至少 80% style IDs 与 carrier families 为新增；`FRESH_DESIGN` 不读取历史，只检查本板。
+
+## Gate 0 — Role Category Consistency — P0
+
+每个 Board 和 refinement 必须保存 `role_category`。
+
+- `HUMAN`：每格为人类角色；不得出现动物 / 物种 carrier。
+- `MASCOT`：每格为非人类拟人化 mascot；不得退化为人类角色。
+- `role_category` 缺失、生成物与类别不一致、或在类别未决时已经生成：FAIL。
 
 ## Gate A — Square
 - 25-grid = 1:1
@@ -17,13 +39,13 @@
 - 是否继承 source slot 的 frozen proportion_profile
 - head 是否比候选明显缩小
 - legs 是否明显被拉长
-- silhouette 是否回退普通成人立绘
-- 是否错误使用真人参考图身体比例
+- silhouette 是否回退普通吉祥物立绘
+- 是否错误使用参考角色参考图身体比例
 
 出现任何明显 anatomical normalization：FAIL。
 
 ## Gate C — Head / Body Style Harmony
-真人模式：
+参考角色模式：
 - head must be fully stylized in target medium
 - no photo-head mismatch
 - no semi-real face on flat/chibi body
@@ -31,10 +53,10 @@
 ## Gate D — Trait Embodiment — P0
 不要以“像不像照片”作为最高标准。
 
-直接检查最终 IP 是否体现人物特征：
+直接检查最终 IP 是否体现角色特征：
 1. stylized_identity_read — 是否有这个人的整体味道
 2. head_character_embodiment — 头脸趋势是否有来源感
-3. hairstyle_embodiment — 发型结构/体积是否体现参考人物
+3. hairstyle_embodiment — 发型结构/体积是否体现参考角色
 4. age_impression_stability — 年龄感是否稳定
 5. base_vibe_continuity — 基础气质是否仍可识别
 
@@ -42,7 +64,7 @@
 
 ## Gate E — Template Face Suppression — P0
 以下属于 FAIL：
-- 通用韩漫帅哥 / 美女脸覆盖人物特征
+- 通用韩漫帅哥 / 美女脸覆盖角色特征
 - 统一 V-line
 - 统一锐眉
 - 统一狭长上挑眼
@@ -63,7 +85,7 @@
 - selected tile = style/personality authority
 
 如果最终脸只是复制 selected tile 的模板脸：FAIL。
-如果最终脸为了贴原图而变真人：FAIL。
+如果最终脸为了贴原图而变参考角色：FAIL。
 
 ## Gate H — Reference Expression Independence
 - source smile must not dominate board
@@ -86,7 +108,7 @@
 - background-only differentiation does not count
 
 ## Gate L — Adult Age
-- stylization must not childify adult reference
+- stylization must not childify mascot reference
 
 ## Gate M — No Props
 - no handheld canonical props
@@ -121,7 +143,7 @@ social_ip_anatomy_read: 0..100
 
 ## v10 Board Number Alignment Gate — P0
 
-除人物质量外，每张 Board 还必须通过状态一致性检查：
+除角色质量外，每张 Board 还必须通过状态一致性检查：
 
 - Board Manifest 已在渲染前冻结
 - slots 恰好 25 个

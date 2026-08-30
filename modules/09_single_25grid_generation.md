@@ -1,4 +1,4 @@
-# Module 09 — One-Shot 25-Grid Generation v11
+# Module 09 — One-Shot 25-Grid Generation v13
 
 ## P0
 必须一次生成完整 25 宫格。
@@ -13,6 +13,9 @@
 ## 1. Pre-Render Board Manifest — P0
 
 在生图之前必须已经存在冻结的：
+- `design_context`
+- `run_id`
+- `history_access`
 - `character_id`
 - `board_id`
 - `board_ordinal`
@@ -26,8 +29,11 @@
 - body pose / empty-hand gesture
 - outfit logic
 - frozen proportion_profile
+- `MASCOT`：carrier_species / carrier_family / carrier_archetype / carrier_rationale
 
 生成阶段只消费 Manifest，不得重新选 Style 或重新排序。
+
+`FRESH_DESIGN` 必须从 run-scoped Manifest 读取，并在生成前确认 `history_access: none`；不得回查旧 Board 来补全任何 slot。
 
 ---
 
@@ -61,24 +67,24 @@
 ---
 
 ## 4. Character Continuity
-真人模式下：
-- 25 格都直接参考原始真人图的人物视觉特征
+参考角色模式下：
+- 25 格都直接参考原始参考角色图的角色视觉特征
 - 保持年龄感和头部来源感
-- 不要求每格做成同一张真人脸
-- 不允许 style-default template face 抹掉人物特征
+- 不要求每格做成同一张参考角色脸
+- 不允许 style-default template face 抹掉角色特征
 - no handheld props
-- stylized adult IP proportions; every slot must carry a frozen proportion_profile
+- stylized mascot IP proportions; every slot must carry a frozen proportion_profile
 
 ---
 
 ## 5. Source Photo Rules
-真人模式下：
-- 体现 whole-head visual character
-- 允许隐式放大人物本身有辨识度的地方
+参考角色模式下：
+- 体现 whole-character visual character
+- 允许隐式放大角色本身有辨识度的地方
 - 不复制源图瞬时表情
 - 不复制源图服装
 - 不复制源图姿态
-- 不保留摄影式真人脸质感
+- 不保留摄影式参考角色脸质感
 
 ---
 
@@ -90,6 +96,10 @@
 grid_slot
 row
 col
+carrier_species
+carrier_family
+carrier_archetype
+carrier_rationale
 style_id
 style_recipe_snapshot
 matched_personality

@@ -1,52 +1,23 @@
 # Board / Slot Binding — P0
-A frozen Board Manifest has already assigned designs to slots 01–25. Use it exactly.
+A frozen Board Manifest has already assigned mascot designs to slots 01–25. Use it exactly.
 Visible numbers are row-major and immutable. Never reorder or regenerate slot mapping.
+For every slot, consume its frozen `carrier_species`, `carrier_family`, `carrier_archetype`, and `carrier_rationale`; do not substitute a related animal or reuse another slot's carrier family.
 {{board_slot_manifest}}
 
-# Prompt Template — PERSONA_ONLY (v11)
+# Prompt Template — MASCOT (V13)
 
-Use case: stylized-character-ip
-Asset type: dynamic 25-style persona exploration board
+Use case: stylized-mascot-ip
+Asset type: dynamic 25-style mascot exploration board
+
+Role category: `MASCOT` only. Do not use this prompt until the Role Category Gate has resolved to `MASCOT`.
 Canvas: strict 1:1 square
 
-Identity premise:
-No reliable real-person visual identity is available.
-Build one coherent human IP identity from the provided account/persona/aesthetic context.
-Do not claim real-person resemblance.
-
-Character:
-- every slot follows its frozen proportion_profile from the Board Manifest
-- same base persona across all 25 cells
-- stylized adult social character
-- target 4.2–5.2 heads
-- normal allowed 3.8–5.4 heads, hard max 5.6
-- avoid realistic model proportions
+Mascot premise:
+- 25 independent mascot candidates within one account/content universe
+- every slot follows its frozen carrier, personality, pose, silhouette and style recipe
+- full-body mascot in every cell
 - no handheld props
-- compact styles must still read as adult
-
-Personality-to-expression:
-Each tile receives its own matched personality and visual expression package:
-- expression family
-- facial expression cue
-- gaze cue
-- head pose cue
-- body pose cue
-- empty-hand gesture
-
-Expression diversity:
-- >=9 expression families
-- same expression family <=5 tiles
-- obvious smiles <=5 tiles
-- do not default to friendly smiling faces
-
-Pose diversity:
-- >=8 pose families
-- both hands in pockets <=3 tiles
-- all pocket poses <=8 tiles
-
-Outfit diversity:
-- clothing follows style + persona, not one repeated canonical outfit
-- use >=8 outfit silhouette families across the board
+- suitable as long-term article-illustration sidekick
 
 Grid:
 - one single 5x5 image
@@ -57,7 +28,7 @@ Grid:
 
 Style instructions:
 Insert 25 dynamically selected Style Recipes.
-Each tile must transform the character itself, not only the background.
+Each tile must transform the mascot itself, not only the background.
 
 Output:
 One-shot complete 25-grid.

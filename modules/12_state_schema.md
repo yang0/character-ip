@@ -1,11 +1,19 @@
-# Module 12 — State Schema v11
+# Module 12 — State Schema v13
 
 ```yaml
+design_context: FRESH_DESIGN | CONTINUATION
+run_id: "20260830T201000-yang02010"
+history_access: none | {mode: explicit_single_board, board_id: "B006"}
+manifest_path: "state/runs/<run_id>/board-B001-manifest.yaml"
+output_root: "output/runs/<run_id>/"
+
 project:
   character_id: "C001"
   active_board_id: "B002"
   next_board_ordinal: 3
 
+role_category: HUMAN | MASCOT
+role_category_source: explicit_user_request | clear_human_photo | named_real_person
 route: VISUAL_TRAIT_REFERENCE | PERSONA_ONLY | HYBRID_IDENTITY
 
 identity:
@@ -39,6 +47,10 @@ boards:
         row: 1
         col: 1
         tile_bbox_normalized: {x0: 0.0, y0: 0.0, x1: 0.2, y1: 0.2}
+        carrier_species: string_or_null  # required for MASCOT
+        carrier_family: string_or_null   # required for MASCOT; unique within Board
+        carrier_archetype: string_or_null
+        carrier_rationale: string_or_null
         style_id: "S087"
         family_id: "Fxx"
         selection_bucket: core|adjacent|exploratory|wildcard
@@ -116,7 +128,10 @@ refinements:
 5. `01–25` 是当前 Board 的 slot，不是固定 style_id
 6. 多 Board 场景必须先解析 board，再解析 slot
 7. 用户选中的 Look 绑定 actual rendered tile visual
-8. 真人人物 Trait 仍绑定 original real reference，而不是 generated tile face
+8. 参考角色角色 Trait 仍绑定 original real reference，而不是 generated tile face
 9. 每个 slot 必须有 frozen proportion_profile
 10. 单张 refinement 默认必须继承 source slot 的 proportion_profile
 11. Original real photo body anatomy 永远不是 IP 身体比例权威
+12. FRESH_DESIGN 的 `history_access == none`，且不读取旧 Board。
+13. MASCOT Board 的 carrier species 与 carrier family 均在 25 格内唯一。
+14. CONTINUATION 只能引用用户点名的单一 Board；新 Board 相对它至少 80% style IDs 与 carrier families 为新增。

@@ -18,7 +18,7 @@
 5. Style Affinity
 
 ## Reference Expression Rule
-不要因为参考照正在微笑，就把 `smiling / friendly` 当成人格结论。
+不要因为参考照正在微笑，就把 `smiling / friendly` 当吉祥物格结论。
 
 单张照片的瞬时表情只能作为弱信号。
 

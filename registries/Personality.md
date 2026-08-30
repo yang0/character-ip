@@ -1,4 +1,4 @@
-# Personality Registry｜人物 IP 人格气质库
+# Personality Registry｜角色 IP 人格气质库
 
 > 用途：供 `SKILL.md` 在 25 宫格探索阶段和用户选中编号后的定稿阶段调用。
 > 本文件是“人格候选语义库”，不是 25 种画风的固定绑定表。
@@ -15,7 +15,7 @@
 
 `Final Personality = 70% User Base Persona + 20% Style Affinity + 10% Meme / Visual Contrast`
 
-- **70% User Base Persona**：来自真人照片气质、账号 Bio、内容语言、职业角色、用户明确自述。
+- **70% User Base Persona**：来自参考角色照片气质、账号 Bio、内容语言、职业角色、用户明确自述。
 - **20% Style Affinity**：来自 `style.md` 对该画风更容易放大的气质倾向。
 - **10% Meme / Visual Contrast**：加入一个轻微反差点，让角色更有网感和记忆点。
 
@@ -23,7 +23,7 @@
 
 - 每个最终 Personality Stack 建议 4–5 个词。
 - 至少包含：`1 个能力/认知词 + 1 个社交温度词 + 1 个网络人格词 + 1 个轻微缺陷/反差词`。
-- 最多允许 1 个偏负面词；不要把真人 IP 设计成极端 Mascot 人格。
+- 最多允许 1 个偏负面词；不要把参考角色 IP 设计成极端 Mascot 人格。
 - 不允许机械随机抽取；必须先建立用户 Base Persona，再匹配。
 - 不允许因为“男性/女性”直接决定人格；性别只影响表达方式，不决定人格内容。
 
@@ -52,7 +52,7 @@
 
 1. 用户明确自述的人格 / 审美
 2. 账号长期语言风格与内容气质
-3. 真人照片中的基础气场（仅作为弱信号）
+3. 参考角色照片中的基础气场（仅作为弱信号）
 4. 内容领域和目标受众
 5. 平台语境
 
@@ -314,7 +314,7 @@
 
 # 5. 禁用 / 慎用人格词
 
-人物个人 IP 默认慎用以下过度负面或道德判断过强的词：
+角色Mascot IP 默认慎用以下过度负面或道德判断过强的词：
 
 `greedy, ruthless, cruel, manipulative, shameless, paranoid, predatory, malicious, psychotic`
 
@@ -330,7 +330,7 @@
 
 # 6. 最终检查
 
-每次生成人格前检查：
+每次生吉祥物格前检查：
 
 - 是否仍然符合用户本人/账号？
 - 是否只是把画风人格硬套到用户身上？

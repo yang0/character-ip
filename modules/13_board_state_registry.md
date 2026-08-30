@@ -1,4 +1,4 @@
-# Module 13 — Board / Slot State Registry v11
+# Module 13 — Board / Slot State Registry v13
 
 ## Purpose
 
@@ -6,21 +6,31 @@
 
 这是 v10 的 P0 状态管理模块。
 
+## 0. Run Scope and History Access — P0
+
+每次请求先由 Module 01 决定 `design_context`。
+
+- `FRESH_DESIGN`：不得解析或扫描旧 Board。创建独立 `run_id`，其首板为 `B001`，状态保存在 `state/runs/<run_id>/`。
+- `CONTINUATION`：只有用户明确点名旧 Board/slot/图片并要求继续、精修或修改时成立；只读取该 Board 及必要关联资产。
+
+新 Manifest 必须记录 `design_context`、`run_id`、`history_access`。`FRESH_DESIGN` 的 `history_access` 固定为 `none`；`CONTINUATION` 必须记录 `{mode: explicit_single_board, board_id: ...}`。
+
 ---
 
 ## 1. Three-Level Identity Key — P0
 
 每一个可选择格子必须使用三层唯一键：
 
-`character_id + board_id + grid_slot`
+`run_id + character_id + board_id + grid_slot`
 
 例如：
 
-`C001 / B002 / 02`
+`20260830T201000-x / C001 / B002 / 02`
 
 含义：
-- `C001`：同一个人物 / 同一个 IP 项目
-- `B002`：该人物生成的第二张 25 宫格
+- `run_id`：隔离的设计运行；fresh run 之间不共享历史
+- `C001`：同一个角色 / 同一个 IP 项目
+- `B002`：该角色生成的第二张 25 宫格
 - `02`：第二张宫格里的视觉编号 02
 
 禁止只用 `02` 作为全局唯一键。
@@ -65,6 +75,9 @@ col = ((slot - 1) mod 5) + 1
 Manifest 至少包含：
 
 ```yaml
+design_context: FRESH_DESIGN
+run_id: 20260830T201000-x
+history_access: none
 character_id: C001
 board_id: B002
 board_ordinal: 2
@@ -143,8 +156,8 @@ Board 生成后：
 > 对“选中的外观风格”以用户实际看到的 Rendered Tile 为第一视觉依据；
 > Frozen Recipe 作为语义补充，而不是把结果强行拉回原计划 Style。
 
-但真人模式下：
-- Original Real Photo 仍然是人物特征主参考
+但参考角色模式下：
+- Original Real Photo 仍然是角色特征主参考
 - Rendered Tile 不是脸部身份主参考
 
 因此定稿参考优先级为：
@@ -186,7 +199,7 @@ tile_bbox_normalized:
 
 ## 7. Multi-Board Resolution Rules
 
-同一个人物可以存在多个 Board：
+同一个角色可以存在多个 Board：
 
 ```text
 C001 / B001
@@ -291,4 +304,4 @@ Board 输出前必须检查：
 
 单张 refinement 默认继承该 profile。
 
-原始真人图不能覆盖这个比例状态。
+原始参考角色图不能覆盖这个比例状态。

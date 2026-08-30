@@ -1,4 +1,4 @@
-# Module 10 — Selection Refinement v11
+# Module 10 — Selection Refinement v13
 
 ## 1. Trigger
 
@@ -8,7 +8,7 @@
 - `上一版17`
 - `第一版04`
 
-先由 Board State Registry 解析 `board_id + grid_slot`。
+先由 Board State Registry 解析 `run_id + board_id + grid_slot`。只有 `CONTINUATION` 且用户明确点名旧 Board 时，才可读取历史 Board。
 
 ---
 
@@ -17,6 +17,7 @@
 选号后禁止重新运行 Style Selector。
 
 必须从 Frozen Board Manifest 读取该 slot：
+- role_category
 - style_id
 - style_recipe_snapshot
 - matched personality
@@ -42,9 +43,13 @@
 
 ---
 
-## 4. Triple Reference Contract — P0
+## 4. Role Continuity — P0
 
-真人模式下：
+refinement 必须继承 source slot 的 `role_category`。不得在精修时把 human 改成 mascot，或把 mascot 改成人类；只有用户明确要求重新设计并改变类别时，才可创建新 Board。
+
+## 5. Triple Reference Contract — P0
+
+参考角色模式下：
 
 ### Reference A — Original Real Photo
 职责：
@@ -54,7 +59,7 @@
 - base vibe
 
 **Reference A 不负责身体比例。**
-不得因为真人图存在，就恢复真人照片中的 head/body anatomy。
+不得因为参考角色图存在，就恢复参考角色照片中的 head/body anatomy。
 
 ### Reference B — Actual Selected Rendered Tile
 职责：
@@ -73,7 +78,7 @@
 - **frozen proportion_profile**
 - continuity metadata
 
-人物 Trait：`A > B`
+角色 Trait：`A > B`
 
 用户选中的视觉 Look：`B > Frozen Recipe`
 
@@ -81,7 +86,7 @@
 
 ---
 
-## 5. Re-Embodiment, Not Enlargement
+## 6. Re-Embodiment, Not Enlargement
 
 用户点选某格后，不是像素放大。
 
@@ -90,16 +95,16 @@
 `original visual traits + actual selected tile look + frozen slot semantics + frozen proportion_profile → clean re-render`
 
 如果选中格的脸模板化：
-- 人物特征从原图重新带回来
-- 不增加真人感
+- 角色特征从原图重新带回来
+- 不增加参考角色感
 
-如果单张生成开始恢复真人身体：
+如果单张生成开始恢复参考角色身体：
 - 立即恢复 frozen proportion_profile
 - 不允许以“更精致 / 更成熟 / 更时尚”为理由拉长身体
 
 ---
 
-## 6. P0 — Proportion Inheritance Contract
+## 7. P0 — Proportion Inheritance Contract
 
 每个 selected slot 必须有：
 
@@ -122,7 +127,7 @@ proportion_profile:
 - 头明显缩小
 - 腿明显增长
 - 肩腰恢复时装模特人体
-- 仅因为高清化就改成人体正常比例
+- 仅因为高清化就改吉祥物体正常比例
 
 如果 selected tile 的实际渲染比例已经略超规则：
 - 不继续放大错误
@@ -131,11 +136,11 @@ proportion_profile:
 
 ---
 
-## 7. Output
+## 8. Output
 
 默认：
 - strict 1:1 square
-- one full-body adult social IP
+- one full-body IP consistent with role_category
 - character height 72–82%
 - target 4.2–5.2 heads
 - normal 3.8–5.4
@@ -148,12 +153,12 @@ proportion_profile:
 
 ---
 
-## 8. Anti-Normalization Check — P0
+## 9. Anti-Normalization Check — P0
 
 最终输出前检查：
 
 FAIL if:
-- body visibly shifts toward normal realistic adult anatomy
+- body visibly shifts toward normal realistic mascot anatomy
 - head becomes too small relative to body
 - legs become fashion-illustration long
 - silhouette loses compact social-IP readability
@@ -161,12 +166,12 @@ FAIL if:
 
 PASS only if:
 - selected style remains intact
-- adult age remains intact
+- mascot age remains intact
 - body remains clearly stylized / IP-proportioned
 
 ---
 
-## 9. Refinement Lineage
+## 10. Refinement Lineage
 
 创建：
 
@@ -187,7 +192,7 @@ parent_refinement_id: null
 
 ---
 
-## 10. Trait Embodiment Goal
+## 11. Trait Embodiment Goal
 
 最终应：
 - 有本人特征来源感
@@ -195,7 +200,7 @@ parent_refinement_id: null
 - 年龄感稳定
 - 画风与用户所选实际 Tile 一致
 - 不被 template face 覆盖
-- 不是半真人脸
+- 不是半参考角色脸
 - **不是正常人体立绘**
 
 优先级：

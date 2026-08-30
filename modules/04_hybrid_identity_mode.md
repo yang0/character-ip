@@ -1,13 +1,13 @@
 # Module 04 — Hybrid Identity Mode v10
 
 ## Trigger
-真人图 + 账号 / 文件 / 文本资料同时存在。
+参考角色图 + 账号 / 文件 / 文本资料同时存在。
 
 ## Division of Labor
 
 ### Image
 决定：
-- whole-head visual character
+- whole-character visual character
 - face-shape tendency
 - age impression
 - gender expression
@@ -16,7 +16,7 @@
 
 图片默认不锁：
 - source smile / expression
-- source outfit
+- source costume
 - source body pose
 - photographic realism
 
@@ -25,7 +25,7 @@
 - personality
 - profession aura
 - content role
-- personal aesthetic
+- platform aesthetic
 - clothing tendency
 - meme/social tone
 
@@ -61,13 +61,13 @@
 - 以账号审美 + style recipe 为主
 
 ## Trait Embodiment Principle
-混合模式下也不追求“真人肖像相似”。
+混合模式下也不追求“参考角色肖像相似”。
 
 目标是：
 
 `person visual traits + account persona + expressive personality + coherent stylization`
 
 即：
-- 看得出人物自己的特征
+- 看得出角色自己的特征
 - 看得出账号人格
 - 但整张脸仍然是 IP 风格里的脸

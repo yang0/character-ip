@@ -1,374 +1,139 @@
-# Character IP 25-Grid Studio
-## Version 11 — Trait Embodiment + Dynamic 150 + Board-Slot Binding + Proportion Inheritance
-
-## 1. Purpose
-
-为用户设计具有强网感、可长期复用、适合 X / 小红书 / 社交媒体内容的个人 Human IP。
-
-首轮：
-
-> 从 150 种 Style Universe 中动态筛选 25 种，并一次生成完整 5×5 / 25 宫格。
-
-用户选编号后：
-
-> 用“原始真人图提供的人物特征 + 选中格风格/人格”重新生成一张 1:1 方形单人 IP，而不是简单放大宫格小图。
-
+---
+name: character-ip-router-v13
+description: Route Human Character IP versus Mascot IP requests; ask only when the requested role category is unresolved, then create a 5x5 exploration board.
+metadata:
+  version: 13
 ---
 
-## 2. Input Router
+# Character IP Router V13
 
-### Route A — VISUAL_TRAIT_REFERENCE
-存在清晰真人照片 / 头像。
+## 核心任务
 
-### Route B — PERSONA_ONLY
-没有真人图，但有账号 / Bio / 文件 / 内容资料。
+为用户的账号 / 主题 / 栏目设计 Human Character IP 或拟人化 Mascot IP 候选。
 
-### Route C — HYBRID_IDENTITY
-真人图 + 账号 / 文件 / 文本。
+重点不是解释，而是：
 
-分工：
-- image = visual person traits
-- text = persona/context
-- style = how to translate
-- expression engine = attitude
+> 一次生成 1 张 5×5 25 宫格图，
+> 并让 **画风应用方式与人物 IP Skill 保持同构**。
 
----
+## 最高优先级
 
-## 3. Core Goal — Trait Embodiment, Not Literal Resemblance — P0
+1. 只生成一张 25 宫格图
+2. 25 格必须是独立候选，不是同一角色的纯换皮
+3. 风格选择与风格编译，沿用 Human Skill 的流程
+4. 先冻结 Board Manifest，再一次生图
+5. style 必须真正作用于角色本体，而不只是背景
 
-当存在真人参考图时，目标不是把 IP 做得“越来越像照片”。
+## P0｜Role Category Gate
 
-目标是：
+先确定 `role_category`，再运行任何视觉/人格路由。
 
-> 让 IP 的头部、脸、发型、年龄感和整体神态，能够明显体现这个人的人物特征，同时完全属于目标画风。
+优先级：
 
-必须遵守：
+1. 用户明确说“人类角色 / 人类 IP” → `HUMAN`
+2. 用户明确说“吉祥物 / mascot” → `MASCOT`
+3. 用户没有明确类别，但给出清晰人类照片 → `HUMAN`
+4. 用户没有明确类别，但目标是有名有姓的具体人物 → `HUMAN`
+5. 其他所有情况 → 必须先问：**“需要设计人类 IP 还是吉祥物 IP？”**
 
-> The goal is not photoreal resemblance. The goal is stylized embodiment of the person's recognizable traits, age impression, and overall vibe.
+用户明确类别始终覆盖照片、人物姓名和历史偏好。第 5 条是 `No Forced Clarification` 的唯一 P0 例外：类别未决时，不得冻结 Board Manifest、生成候选或猜测类别。
 
-成功标准不是：
-- 像证件照
-- 像真人肖像
-- 五官位置逐点复刻
+## P0｜Design Context Gate
 
-成功标准是：
-- 有这个人的头部味道
-- 有这个人的脸型/眉眼/发型/年龄感趋势
-- 某些有辨识度的地方可以被适度放大
-- 不被风格默认帅哥 / 美女脸吞掉
-- 头部与整体画风完全一致
+在读取 `state/`、`output/`、旧 Manifest、旧图片或历史风格/物种记录之前，先确定 `design_context`：
 
----
+- `FRESH_DESIGN`：新会话；用户说“重新设计 / 重新做 / 从头设计 / 再来一批”；或新候选请求没有明确点名旧 Board。
+- `CONTINUATION`：用户明确点名旧 Board/slot/图片，并明确要求“继续 / 精修 / 修改”。
 
-## 4. Visual Trait Authority — P0
+`FRESH_DESIGN` 是默认值，且必须：
 
-只要存在真人参考图：
+1. 不枚举、不读取、不引用任何历史 `state/`、`output/`、Manifest、旧图片、历史风格或物种记录。
+2. 建立新的 `run_id`，写入 `state/runs/<run_id>/board-B001-manifest.yaml`；每个 fresh run 的首板固定为 `B001`。
+3. 输出写入 `output/runs/<run_id>/`；不得覆盖或引用历史资产。
+4. 在 Manifest 中记录 `history_access: none`。
 
-> 原始真人图始终是人物特征的视觉主源。
+`CONTINUATION` 仅可读取用户点名的单个 Board 及其关联选中格。创建后续 Board 时，必须在 Manifest 保存显式引用，并按 `modules/08_style_selector.md` 执行跨 Board 的 style 与 carrier 新鲜度校验。
 
-不要先把真人脸拆成一长串 Face DNA / S1-S5 / 五官参数，再依赖文字重建。
+## 固定流程
 
-模型应直接看图，在生成过程中隐式理解并体现：
-- whole-head character
-- face-shape tendency
-- hairstyle architecture
-- facial relationship character
-- age impression
-- gender expression
-- overall vibe
+### Step 1｜确定设计上下文与角色类别
+- 先执行 `modules/01_input_router.md` 的 Design Context Gate，再执行 Role Category Gate。
+- `HUMAN`：使用 `prompts/25grid_human.md`，角色为人类 IP；不得引入动物 carrier。
+- `MASCOT`：使用 mascot Prompt，角色为非人类拟人化 mascot；不得退化为人类角色。
 
-这些可以被风格化、简化、夸张，但不能被替换成通用模板脸。
+### Step 2｜理解主题
+提炼：
+- 账号定位
+- 内容主题
+- 语义母题
+- 平台气质
+- sidekick 使用场景
 
-### 25 宫格
-每一格都必须独立直接重新参考原始真人图。
-
-### 单张定稿
-原始真人图再次作为人物特征主参考。
-选中格只负责：
-- style
+### Step 3｜冻结上游角色变量与 Carrier Plan
+在 style 选择之前，先冻结：
+- `MASCOT`：25 个 `carrier_species`、`carrier_family`、`carrier_archetype`、`carrier_rationale`；同一 Board 内物种族群不得重复或近缘重复。
 - personality
-- expression
-- pose
-- outfit
-- palette
-- material
-
-如果选中格已经模板化：
-> 定稿时应重新把人物特征带回来，而不是忠实放大错误脸。
-
----
-
-## 5. Whole-Head Stylized Translation — P0
-
-保留的是：
-- recognizable head identity cues
-- head/face overall character
-- hairstyle family and volume
-- age impression
-- facial attitude / vibe
-
-不保留的是：
-- photographic skin
-- portrait lighting
-- realistic nose/lip modeling
-- photo-like face texture
-
-头必须完整重绘进目标 style。
-
-核心：
-
-> Preserve character traits; translate rendering language.
-
----
-
-## 6. Implicit Trait Amplification — P0
-
-允许模型直接从参考图视觉判断哪些地方最有辨识度，并在目标画风允许的范围内适度放大。
-
-但必须：
-- 不输出一份用户专属 Face DNA 清单作为主驱动
-- 不把放大变成丑化
-- 不凭空制造参考图中没有的人物特征
-- 不为了“更像”而提高写实度
-
-例如可以视觉上适度放大：
-- 发型体积与轮廓
-- 眉眼态度
-- 脸型趋势
-- 嘴角/神态
-- 某个明显的头部比例特征
-
-一句话：
-
-> Amplify the person's own visual character, not the style's default face.
-
----
-
-## 7. Template Face Suppression — P0
-
-禁止风格化自动变成：
-- generic anime protagonist
-- generic webtoon handsome face
-- universal V-line jaw
-- universal sharp hero brows
-- universal narrow/upturned eyes
-- generic cute round face
-- style-default beauty template
-
-核心：
-
-> Stylize this person, not the style's ideal person.
-
----
-
-## 8. Reference Expression Is Not Identity
-
-参考图某一瞬间的微笑 / 中性表情不是身份锁。
-
-具体表达由：
-
-`Personality Engine → Expression & Pose Engine`
-
-动态生成。
-
-明显 smile <=5/25。
-neutral/polite/mild smile <=6/25。
-
----
-
-## 9. Reference Clothing Is Not Identity
-
-除非明确要求：
-- 源图服装不得大量复制
-- 25 格至少 8 种 outfit silhouette
-
----
-
-## 10. Square Social Character System + Proportion Inheritance — P0
-
-所有标准 IP 图，包括 25 宫格和选号后的单张定稿，都必须同时满足：
-
-1. `1:1 square canvas`
-2. `stylized social-IP anatomy`
-
-仅画布是 1:1 不算达标。人物如果恢复成普通成人/时尚立绘比例，仍然属于失败。
-
-全局比例：
-- default target: 4.2–5.2 heads
-- normal allowed: 3.8–5.4 heads
-- hard max: 5.6 heads
-- realistic 6.5–8 head fashion/model anatomy: forbidden unless user explicitly requests it
-
-每个 Board Slot 必须冻结一个 `proportion_profile`。
-
-用户选号后，单张 refinement 必须继承该 `proportion_profile`，禁止重新正常化人体。
-
-真人参考图：
-- 可以决定头部人物特征、年龄感、气质
-- **不得作为身体比例参考**
-
-选中 Tile：
-- 提供 style / silhouette / characterization / proportion read
-- 但若实际 Tile 本身超过全局 Social-IP 上限，则全局比例锁优先
-
-核心：
-
-> Refinement increases polish, not anatomical realism or normalization.
-
----
-
-## 11. Dynamic 150 Style Universe
-
-Canonical IDs：
-`S001–S150`
-
-用户看到的 `01–25` 只是当前 board slot。
-
-每轮动态选择：
-- 10 Core Fits
-- 7 Adjacent
-- 5 Exploratory
-- 3 Wildcards
-
-使用 Progressive Disclosure：
-1. 读 styles/INDEX.md
-2. 选 25
-3. 只读相关 Family Recipe
-
----
-
-## 12. Character-First Style Diversity
-
-背景不同不算人物风格不同。
-
-差异必须进入：
-- head rendering
-- facial abstraction
-- line system
-- body proportion
-- silhouette
-- outfit
-- material
-- palette
-- shading
-- expression / pose language
-
----
-
-## 13. Personality / Expression / Pose
-
-沿用：
-`70% User Base Persona + 20% Style Affinity + 10% Meme Contrast`
-
-人格必须编译成：
-- expression
-- gaze
-- head pose
-- body pose
-- empty-hand gesture
-
-25 格至少 9 个 Expression Families，至少 8 个 Pose Families。
-
----
-
-## 13.5. Selected-Slot Proportion Continuity — P0
-
-用户选择某个格子后，必须从 Frozen Slot State 读取：
-- `proportion_profile`
-- `target_head_count`
-- `head_size_bias`
-- `limb_length_bias`
-- `torso_leg_balance`
-- `silhouette_compactness`
-
-单张定稿不得因为“高清、精修、成熟、时尚、Editorial”等词自动把身体拉回普通真人比例。
-
-Reference priority for body proportion:
-
-`Frozen proportion_profile > selected tile proportion read > style default > real-photo body anatomy (never)`
-
-如果用户明确要求改变比例，才允许更新 proportion profile。
-
----
-
-## 14. Board / Slot Binding — P0
-
-每次 25 宫格生成前必须先创建并冻结 Board Manifest。
-
-唯一选择键：
-
-`character_id + board_id + grid_slot`
-
-其中：
-- `grid_slot` 永远与图片上可见编号 `01–25` 一致
-- `01–25` 只代表当前 Board 的位置，不代表固定 style_id
-- 新 Board 可以重新分配 25 个 Style，但旧 Board 的 slot 映射永久不变
-
-用户选号时：
-
-> **Selection is retrieval, not regeneration.**
-
-禁止重新运行 Style Selector。必须读取该 Board 已冻结的 slot state。
-
-多张 Board 并存时：
-- `02` → 当前 active / 最新 Board 的 02
-- `第二张图的02` → board_ordinal=2 + slot=02
-- `上一版17` → previous board + slot=17
-
-此外，选号后必须同时使用：
-1. Frozen Slot State（style/personality/expression/pose/outfit 语义）
-2. Actual Rendered Tile Visual（用户实际看到的该格视觉）
-
-如果“计划 Style Recipe”和“实际画出来的格子”有偏差：
-- 用户实际看到并选中的 Tile 决定最终 Look
-- Frozen Recipe 只做语义辅助
-- 真人原图仍负责人物 Trait Embodiment，不让生成 Tile 的模板脸成为身份主源
-
-详见：`modules/13_board_state_registry.md`。
-
----
-
-## 15. Trait Embodiment Gate — P0
-
-生成后不再用“像不像照片”作为最高验收标准。
-
-检查：
-1. stylized identity read — 是否有这个人的整体味道
-2. head character embodiment — 头脸趋势是否体现人物本身
-3. hairstyle embodiment — 发型结构/体积是否有来源感
-4. age impression stability — 年龄感是否稳定
-5. vibe/personality continuity — 基础气质是否仍可识别
-6. template-face suppression — 是否掉进通用模板脸
-7. style coherence — 脸是否完整属于目标画风
-
-如果最终只是“一个很好看的风格人物，但人物特征被模板脸吞掉”：FAIL。
-
-如果为了提高相似度而变得更真人：FAIL。
-
----
-
-## 16. Selection Refinement — P0
-
-选号后执行：
-
-`Original Visual Traits + Selected Tile Look + Frozen Slot State + Frozen Proportion Profile → New 1:1 Render`
-
-不是：
-
-`Selected Grid Face → Upscale`
-
-最终优先级：
-
-`trait embodiment > style coherence > age stability > personality readability > social-IP proportion > polish > literal resemblance > realism`
-
----
-
-## 17. Final Success Standard
-
-最终角色应该让用户感受到：
-
-> “这不是我的真人脸复制，但这个 IP 的头、气质和神态明显有我的特征。”
-
-而不是：
-
-> “这是一个和我发型差不多的通用动漫帅哥/美女。”
+- expression family
+- pose family
+- silhouette family
+- core hooks
+
+### Step 4｜使用风格系统
+严格按以下顺序：
+
+1. 读取 `styles/INDEX.md`
+2. 执行 `modules/08_style_selector.md`
+3. 选出 25 个 canonical style IDs
+4. 按 `styles/SELECTION_POLICY.md` 做约束
+5. 只读取相关 `styles/families/*.md`
+6. 提取每个 style 的完整 recipe
+7. 写入 Frozen Board Manifest
+8. 执行 `modules/09_single_25grid_generation.md`
+
+### Step 5｜One-Shot 25-Grid
+- 1:1 square
+- 5×5 equal cells
+- 25 个与 `role_category` 一致的 full-body IP 候选
+- 半透明编号 01–25
+- 每格一个独立候选
+- no style names
+- no explanatory text
+
+## 重要约束
+
+### Style Application Lock
+- style 负责怎么画，不负责定义人格
+- personality / pose / carrier 先冻结
+- style recipe 必须改变角色本体，不只是背景
+
+### Board Binding Lock
+- slot 01–25 先冻结再渲染
+- visible numbering row-major
+- 不允许渲染后换位、重排、重编号
+
+### Carrier Diversity Lock
+- `MASCOT` Board 的 25 格必须分别记录 carrier species、family、archetype 与 rationale。
+- 25 个 `carrier_species` 与 25 个 `carrier_family` 都必须唯一；狐狸/赤狐、松鼠/飞鼠、乌龟/机器人乌龟等近缘或修饰命名都视为重复。
+- `FRESH_DESIGN` 只检查本板内部多样性，不读取历史。
+- `CONTINUATION` 新 Board 相比用户点名的旧 Board，至少 80% 的 carrier families 与 style IDs 为新增。
+
+### Diversity Lock
+- 至少 9 个 style families
+- 单 family 最多 4 格
+- 至少 20 / 25 的 style 在角色本体上有明显 transformation
+- 至少 8 / 25 属于强风格变化位
+
+### Prompt Discipline
+- 不把 150 个风格全文塞进一个 prompt
+- 必须 progressive disclosure
+- family recipes 只加载当前 25 个对应部分
+
+## 本版的实验重点
+
+如果用户反馈“人物 Skill 的画风差异更明显”，则本版默认假设：
+
+> 不是风格数量少，而是风格应用机制太弱。
+
+因此本版重点测试：
+
+> **同样的 style application system，用在 mascot 上会不会更有效。**

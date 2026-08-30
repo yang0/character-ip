@@ -1,4 +1,24 @@
-version: v11
+version: v13
+
+design_context:
+  default: FRESH_DESIGN
+  fresh_triggers: [new_session, "重新设计", "重新做", "从头设计", "再来一批"]
+  continuation_requires: [explicit_board_or_slot_or_image, continue_or_refine_or_modify]
+  fresh_history_access: none
+  fresh_manifest_root: "state/runs/<run_id>/"
+  fresh_output_root: "output/runs/<run_id>/"
+  fresh_first_board_id: B001
+  continuation_max_history_boards: 1
+
+role_category:
+  required_before_manifest: true
+  explicit_user_category_overrides_all: true
+  auto_human_triggers:
+    - clear_human_reference_photo
+    - named_real_person
+    - explicit_human_request
+  unresolved_action: ask_user
+  clarification_prompt: "需要设计人类 IP 还是吉祥物 IP？"
 
 canvas:
   ratio: "1:1"
@@ -34,9 +54,15 @@ style_selection:
     exploratory: 5
     wildcard: 3
   freshness:
-    normal_min_new_ratio: 0.60
-    reroll_min_new_ratio: 0.80
-    recent_style_penalty: 0.60
+    continuation_min_new_style_ratio: 0.80
+    fresh_reads_history: false
+
+carrier_diversity:
+  required_for: MASCOT
+  unique_species_per_board: true
+  unique_family_per_board: true
+  continuation_min_new_family_ratio: 0.80
+  required_fields: [carrier_species, carrier_family, carrier_archetype, carrier_rationale]
 
 identity:
   visual_strategy: direct_visual_trait_embodiment

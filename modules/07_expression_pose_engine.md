@@ -2,7 +2,7 @@
 
 ## 1. Purpose
 
-把 `Final Personality` 真正编译成可见的人物气质，而不是只停留在文字标签。
+把 `Final Personality` 真正编译成可见的角色气质，而不是只停留在文字标签。
 
 本模块负责把人格映射到：
 - facial expression
@@ -21,10 +21,10 @@
 
 ## 2. Reference Expression Is Not Identity — P0
 
-真人参考图中的瞬时表情不是身份锁。
+参考角色参考图中的瞬时表情不是身份锁。
 
-有真人图时：
-- 保留 whole-head identity
+有参考角色图时：
+- 保留 whole-character identity
 - 保留 age impression
 - 保留 gender expression
 - 可把照片里的基础气质作为弱信号
@@ -151,7 +151,7 @@ No-Prop 不等于全员插兜。
 
 禁止：
 - 因为 kawaii / chibi 风格把成年用户变成儿童
-- 用幼儿式圆脸、婴儿表情、幼童肢体语言替代成人年龄感
+- 用幼儿式圆脸、婴儿表情、幼童肢体语言替代吉祥物年龄感
 
 核心：
 
