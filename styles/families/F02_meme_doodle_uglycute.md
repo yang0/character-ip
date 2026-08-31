@@ -21,7 +21,7 @@
 - **palette logic**: limited palette, off-white or flat social colors
 - **outfit logic**: simple everyday clothing; silhouette first
 - **personality affinity**: `deadpan / witty / awkward / self-aware`
-- **anti-collapse**: do not add polish that destroys meme timing; preserve mascot age
+- **anti-collapse**: do not add polish that destroys meme timing; preserve character age
 
 ## Whole-Head Rule
 
@@ -34,7 +34,7 @@
 ## S014｜Deadpan Doodle
 
 **中文名**：冷脸涂鸦
-**sidekick_fit**：`medium`
+**identity_fit**：`medium`
 **rendering_stylization**：`very-high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`3/5`
@@ -49,12 +49,12 @@
 **character_translation_rule**：保留参考角色参考中的整体头部识别感与年龄感；按本 style 的 visual thesis 重绘五官、头发与面部材质；可以适度放大高辨识度特征，但不得提高摄影写实度。
 **reference_costume_rule**：参考图服装默认只作为弱审美信号；除非用户明确要求，不复制源图服装、颜色或制服结构到本风格。
 **expression_rule**：不得复制参考照瞬时表情；按 matched personality 动态生成表情、视线和头部姿态。
-**anti_collapse**：do not add polish that destroys meme timing; preserve mascot age；同时必须体现本条特有的 `naive line, awkward spacing, deadpan micro-expression`，不能只换颜色。
+**anti_collapse**：do not add polish that destroys meme timing; preserve character age；同时必须体现本条特有的 `naive line, awkward spacing, deadpan micro-expression`，不能只换颜色。
 
 ## S015｜Minimal Meme Character
 
 **中文名**：极简 Meme 角色
-**sidekick_fit**：`medium`
+**identity_fit**：`medium`
 **rendering_stylization**：`very-high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`3/5`
@@ -69,12 +69,12 @@
 **character_translation_rule**：保留参考角色参考中的整体头部识别感与年龄感；按本 style 的 visual thesis 重绘五官、头发与面部材质；可以适度放大高辨识度特征，但不得提高摄影写实度。
 **reference_costume_rule**：参考图服装默认只作为弱审美信号；除非用户明确要求，不复制源图服装、颜色或制服结构到本风格。
 **expression_rule**：不得复制参考照瞬时表情；按 matched personality 动态生成表情、视线和头部姿态。
-**anti_collapse**：do not add polish that destroys meme timing; preserve mascot age；同时必须体现本条特有的 `primitive icon shapes, reaction-image clarity, very few details`，不能只换颜色。
+**anti_collapse**：do not add polish that destroys meme timing; preserve character age；同时必须体现本条特有的 `primitive icon shapes, reaction-image clarity, very few details`，不能只换颜色。
 
 ## S016｜Reaction Face Cartoon
 
 **中文名**：Reaction 表情漫画
-**sidekick_fit**：`medium`
+**identity_fit**：`medium`
 **rendering_stylization**：`very-high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`3/5`
@@ -89,19 +89,19 @@
 **character_translation_rule**：保留参考角色参考中的整体头部识别感与年龄感；按本 style 的 visual thesis 重绘五官、头发与面部材质；可以适度放大高辨识度特征，但不得提高摄影写实度。
 **reference_costume_rule**：参考图服装默认只作为弱审美信号；除非用户明确要求，不复制源图服装、颜色或制服结构到本风格。
 **expression_rule**：不得复制参考照瞬时表情；按 matched personality 动态生成表情、视线和头部姿态。
-**anti_collapse**：do not add polish that destroys meme timing; preserve mascot age；同时必须体现本条特有的 `amplified micro-expression, comedic timing, simplified body language`，不能只换颜色。
+**anti_collapse**：do not add polish that destroys meme timing; preserve character age；同时必须体现本条特有的 `amplified micro-expression, comedic timing, simplified body language`，不能只换颜色。
 
 ## S017｜Minimal Kawaii Doodle
 
 **中文名**：极简萌系涂鸦
-**sidekick_fit**：`medium`
+**identity_fit**：`medium`
 **rendering_stylization**：`very-high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`3/5`
 **expression_capacity**：`very-high`
 **body_topology_window**：`3.2–4.5 heads`
 **character_rendering_mode**：`simplified-meme-translated`
-**visual_thesis**：tiny facial marks, thick simple contour, mascot-kawaii restraint
+**visual_thesis**：tiny facial marks, thick simple contour, character-kawaii restraint
 **texture / line**：naive/rough simplified line with intentional imperfection
 **palette_logic**：limited palette, off-white or flat social colors
 **outfit_logic**：simple everyday clothing; silhouette first
@@ -109,12 +109,12 @@
 **character_translation_rule**：保留参考角色参考中的整体头部识别感与年龄感；按本 style 的 visual thesis 重绘五官、头发与面部材质；可以适度放大高辨识度特征，但不得提高摄影写实度。
 **reference_costume_rule**：参考图服装默认只作为弱审美信号；除非用户明确要求，不复制源图服装、颜色或制服结构到本风格。
 **expression_rule**：不得复制参考照瞬时表情；按 matched personality 动态生成表情、视线和头部姿态。
-**anti_collapse**：do not add polish that destroys meme timing; preserve mascot age；同时必须体现本条特有的 `tiny facial marks, thick simple contour, mascot-kawaii restraint`，不能只换颜色。
+**anti_collapse**：do not add polish that destroys meme timing; preserve character age；同时必须体现本条特有的 `tiny facial marks, thick simple contour, character-kawaii restraint`，不能只换颜色。
 
 ## S018｜Ugly-Cute Internet Cartoon
 
 **中文名**：怪萌互联网漫画
-**sidekick_fit**：`medium`
+**identity_fit**：`medium`
 **rendering_stylization**：`very-high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`3/5`
@@ -129,12 +129,12 @@
 **character_translation_rule**：保留参考角色参考中的整体头部识别感与年龄感；按本 style 的 visual thesis 重绘五官、头发与面部材质；可以适度放大高辨识度特征，但不得提高摄影写实度。
 **reference_costume_rule**：参考图服装默认只作为弱审美信号；除非用户明确要求，不复制源图服装、颜色或制服结构到本风格。
 **expression_rule**：不得复制参考照瞬时表情；按 matched personality 动态生成表情、视线和头部姿态。
-**anti_collapse**：do not add polish that destroys meme timing; preserve mascot age；同时必须体现本条特有的 `deliberately awkward proportions, cult appeal, dry humor`，不能只换颜色。
+**anti_collapse**：do not add polish that destroys meme timing; preserve character age；同时必须体现本条特有的 `deliberately awkward proportions, cult appeal, dry humor`，不能只换颜色。
 
 ## S019｜Scribble Comment Character
 
 **中文名**：评论区乱线小人
-**sidekick_fit**：`medium`
+**identity_fit**：`medium`
 **rendering_stylization**：`very-high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`3/5`
@@ -149,19 +149,19 @@
 **character_translation_rule**：保留参考角色参考中的整体头部识别感与年龄感；按本 style 的 visual thesis 重绘五官、头发与面部材质；可以适度放大高辨识度特征，但不得提高摄影写实度。
 **reference_costume_rule**：参考图服装默认只作为弱审美信号；除非用户明确要求，不复制源图服装、颜色或制服结构到本风格。
 **expression_rule**：不得复制参考照瞬时表情；按 matched personality 动态生成表情、视线和头部姿态。
-**anti_collapse**：do not add polish that destroys meme timing; preserve mascot age；同时必须体现本条特有的 `quick scribble energy, margin-note look, internet spontaneity`，不能只换颜色。
+**anti_collapse**：do not add polish that destroys meme timing; preserve character age；同时必须体现本条特有的 `quick scribble energy, margin-note look, internet spontaneity`，不能只换颜色。
 
 ## S020｜Office Burnout Doodle
 
 **中文名**：职场耗尽涂鸦
-**sidekick_fit**：`medium`
+**identity_fit**：`medium`
 **rendering_stylization**：`very-high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`3/5`
 **expression_capacity**：`very-high`
 **body_topology_window**：`3.2–4.5 heads`
 **character_rendering_mode**：`simplified-meme-translated`
-**visual_thesis**：tired posture, minimal office-mascot coding without props
+**visual_thesis**：tired posture, minimal office-character coding without props
 **texture / line**：naive/rough simplified line with intentional imperfection
 **palette_logic**：limited palette, off-white or flat social colors
 **outfit_logic**：simple everyday clothing; silhouette first
@@ -169,19 +169,19 @@
 **character_translation_rule**：保留参考角色参考中的整体头部识别感与年龄感；按本 style 的 visual thesis 重绘五官、头发与面部材质；可以适度放大高辨识度特征，但不得提高摄影写实度。
 **reference_costume_rule**：参考图服装默认只作为弱审美信号；除非用户明确要求，不复制源图服装、颜色或制服结构到本风格。
 **expression_rule**：不得复制参考照瞬时表情；按 matched personality 动态生成表情、视线和头部姿态。
-**anti_collapse**：do not add polish that destroys meme timing; preserve mascot age；同时必须体现本条特有的 `tired posture, minimal office-mascot coding without props`，不能只换颜色。
+**anti_collapse**：do not add polish that destroys meme timing; preserve character age；同时必须体现本条特有的 `tired posture, minimal office-character coding without props`，不能只换颜色。
 
-## S021｜Awkward Potato Mascot
+## S021｜Awkward Potato Character
 
 **中文名**：土豆人怪萌
-**sidekick_fit**：`medium`
+**identity_fit**：`medium`
 **rendering_stylization**：`very-high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`3/5`
 **expression_capacity**：`very-high`
 **body_topology_window**：`3.2–4.5 heads`
 **character_rendering_mode**：`simplified-meme-translated`
-**visual_thesis**：rounded potato body, mascot face attitude, weird-cute silhouette
+**visual_thesis**：rounded potato body, character face attitude, weird-cute silhouette
 **texture / line**：naive/rough simplified line with intentional imperfection
 **palette_logic**：limited palette, off-white or flat social colors
 **outfit_logic**：simple everyday clothing; silhouette first
@@ -189,12 +189,12 @@
 **character_translation_rule**：保留参考角色参考中的整体头部识别感与年龄感；按本 style 的 visual thesis 重绘五官、头发与面部材质；可以适度放大高辨识度特征，但不得提高摄影写实度。
 **reference_costume_rule**：参考图服装默认只作为弱审美信号；除非用户明确要求，不复制源图服装、颜色或制服结构到本风格。
 **expression_rule**：不得复制参考照瞬时表情；按 matched personality 动态生成表情、视线和头部姿态。
-**anti_collapse**：do not add polish that destroys meme timing; preserve mascot age；同时必须体现本条特有的 `rounded potato body, mascot face attitude, weird-cute silhouette`，不能只换颜色。
+**anti_collapse**：do not add polish that destroys meme timing; preserve character age；同时必须体现本条特有的 `rounded potato body, character face attitude, weird-cute silhouette`，不能只换颜色。
 
-## S022｜Flat Emoji Mascot
+## S022｜Flat Emoji Character
 
 **中文名**：扁平 Emoji 角色
-**sidekick_fit**：`medium`
+**identity_fit**：`medium`
 **rendering_stylization**：`very-high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`3/5`
@@ -209,12 +209,12 @@
 **character_translation_rule**：保留参考角色参考中的整体头部识别感与年龄感；按本 style 的 visual thesis 重绘五官、头发与面部材质；可以适度放大高辨识度特征，但不得提高摄影写实度。
 **reference_costume_rule**：参考图服装默认只作为弱审美信号；除非用户明确要求，不复制源图服装、颜色或制服结构到本风格。
 **expression_rule**：不得复制参考照瞬时表情；按 matched personality 动态生成表情、视线和头部姿态。
-**anti_collapse**：do not add polish that destroys meme timing; preserve mascot age；同时必须体现本条特有的 `emoji-like facial reduction, bold simple body blocks`，不能只换颜色。
+**anti_collapse**：do not add polish that destroys meme timing; preserve character age；同时必须体现本条特有的 `emoji-like facial reduction, bold simple body blocks`，不能只换颜色。
 
 ## S023｜Micro-Face Stick Adult
 
-**中文名**：微脸火柴吉祥物
-**sidekick_fit**：`medium`
+**中文名**：微脸火柴人物IP
+**identity_fit**：`medium`
 **rendering_stylization**：`very-high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`3/5`
@@ -229,12 +229,12 @@
 **character_translation_rule**：保留参考角色参考中的整体头部识别感与年龄感；按本 style 的 visual thesis 重绘五官、头发与面部材质；可以适度放大高辨识度特征，但不得提高摄影写实度。
 **reference_costume_rule**：参考图服装默认只作为弱审美信号；除非用户明确要求，不复制源图服装、颜色或制服结构到本风格。
 **expression_rule**：不得复制参考照瞬时表情；按 matched personality 动态生成表情、视线和头部姿态。
-**anti_collapse**：do not add polish that destroys meme timing; preserve mascot age；同时必须体现本条特有的 `stick-like limbs, tiny face, recognizable hair and age vibe`，不能只换颜色。
+**anti_collapse**：do not add polish that destroys meme timing; preserve character age；同时必须体现本条特有的 `stick-like limbs, tiny face, recognizable hair and age vibe`，不能只换颜色。
 
-## S024｜Margin Sketch Mascot
+## S024｜Margin Sketch Character
 
 **中文名**：页边速写角色
-**sidekick_fit**：`medium`
+**identity_fit**：`medium`
 **rendering_stylization**：`very-high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`3/5`
@@ -249,19 +249,19 @@
 **character_translation_rule**：保留参考角色参考中的整体头部识别感与年龄感；按本 style 的 visual thesis 重绘五官、头发与面部材质；可以适度放大高辨识度特征，但不得提高摄影写实度。
 **reference_costume_rule**：参考图服装默认只作为弱审美信号；除非用户明确要求，不复制源图服装、颜色或制服结构到本风格。
 **expression_rule**：不得复制参考照瞬时表情；按 matched personality 动态生成表情、视线和头部姿态。
-**anti_collapse**：do not add polish that destroys meme timing; preserve mascot age；同时必须体现本条特有的 `notebook margin marks, unfinished charm, observational humor`，不能只换颜色。
+**anti_collapse**：do not add polish that destroys meme timing; preserve character age；同时必须体现本条特有的 `notebook margin marks, unfinished charm, observational humor`，不能只换颜色。
 
 ## S025｜Dead-Eyed Chibi Adult
 
-**中文名**：死鱼眼吉祥物 Q版
-**sidekick_fit**：`medium`
+**中文名**：死鱼眼人物IP Q版
+**identity_fit**：`medium`
 **rendering_stylization**：`very-high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`3/5`
 **expression_capacity**：`very-high`
 **body_topology_window**：`3.2–4.5 heads`
 **character_rendering_mode**：`simplified-meme-translated`
-**visual_thesis**：compact mascot body, sleepy eyes, restrained cynicism
+**visual_thesis**：compact character body, sleepy eyes, restrained cynicism
 **texture / line**：naive/rough simplified line with intentional imperfection
 **palette_logic**：limited palette, off-white or flat social colors
 **outfit_logic**：simple everyday clothing; silhouette first
@@ -269,12 +269,12 @@
 **character_translation_rule**：保留参考角色参考中的整体头部识别感与年龄感；按本 style 的 visual thesis 重绘五官、头发与面部材质；可以适度放大高辨识度特征，但不得提高摄影写实度。
 **reference_costume_rule**：参考图服装默认只作为弱审美信号；除非用户明确要求，不复制源图服装、颜色或制服结构到本风格。
 **expression_rule**：不得复制参考照瞬时表情；按 matched personality 动态生成表情、视线和头部姿态。
-**anti_collapse**：do not add polish that destroys meme timing; preserve mascot age；同时必须体现本条特有的 `compact mascot body, sleepy eyes, restrained cynicism`，不能只换颜色。
+**anti_collapse**：do not add polish that destroys meme timing; preserve character age；同时必须体现本条特有的 `compact character body, sleepy eyes, restrained cynicism`，不能只换颜色。
 
 ## S026｜Lo-Fi Comment-Section Cartoon
 
 **中文名**：低保真评论区漫画
-**sidekick_fit**：`medium`
+**identity_fit**：`medium`
 **rendering_stylization**：`very-high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`3/5`
@@ -289,5 +289,5 @@
 **character_translation_rule**：保留参考角色参考中的整体头部识别感与年龄感；按本 style 的 visual thesis 重绘五官、头发与面部材质；可以适度放大高辨识度特征，但不得提高摄影写实度。
 **reference_costume_rule**：参考图服装默认只作为弱审美信号；除非用户明确要求，不复制源图服装、颜色或制服结构到本风格。
 **expression_rule**：不得复制参考照瞬时表情；按 matched personality 动态生成表情、视线和头部姿态。
-**anti_collapse**：do not add polish that destroys meme timing; preserve mascot age；同时必须体现本条特有的 `rough digital doodle, compression-like simplicity, reply-meme energy`，不能只换颜色。
+**anti_collapse**：do not add polish that destroys meme timing; preserve character age；同时必须体现本条特有的 `rough digital doodle, compression-like simplicity, reply-meme energy`，不能只换颜色。
 

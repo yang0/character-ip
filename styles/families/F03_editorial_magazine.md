@@ -34,7 +34,7 @@
 ## S027｜Indie Editorial Cartoon
 
 **中文名**：独立编辑漫画
-**sidekick_fit**：`high`
+**identity_fit**：`high`
 **rendering_stylization**：`high`
 **character_transformation_strength**：`4/5`
 **costume_transformation_strength**：`4/5`
@@ -54,7 +54,7 @@
 ## S028｜Cool Flat Editorial
 
 **中文名**：冷感扁平编辑
-**sidekick_fit**：`high`
+**identity_fit**：`high`
 **rendering_stylization**：`high`
 **character_transformation_strength**：`4/5`
 **costume_transformation_strength**：`4/5`
@@ -74,7 +74,7 @@
 ## S029｜Swiss Geometric Character
 
 **中文名**：瑞士网格几何角色
-**sidekick_fit**：`high`
+**identity_fit**：`high`
 **rendering_stylization**：`high`
 **character_transformation_strength**：`4/5`
 **costume_transformation_strength**：`4/5`
@@ -94,7 +94,7 @@
 ## S030｜Conceptual Magazine Figure
 
 **中文名**：概念杂志角色
-**sidekick_fit**：`high`
+**identity_fit**：`high`
 **rendering_stylization**：`high`
 **character_transformation_strength**：`4/5`
 **costume_transformation_strength**：`4/5`
@@ -114,7 +114,7 @@
 ## S031｜Bauhaus-Logic Character
 
 **中文名**：现代主义几何角色
-**sidekick_fit**：`high`
+**identity_fit**：`high`
 **rendering_stylization**：`high`
 **character_transformation_strength**：`4/5`
 **costume_transformation_strength**：`4/5`
@@ -134,7 +134,7 @@
 ## S032｜Continental Fashion Editorial
 
 **中文名**：欧陆时装编辑插画
-**sidekick_fit**：`high`
+**identity_fit**：`high`
 **rendering_stylization**：`high`
 **character_transformation_strength**：`4/5`
 **costume_transformation_strength**：`4/5`
@@ -154,7 +154,7 @@
 ## S033｜Newspaper Column Cartoon
 
 **中文名**：报刊专栏漫画
-**sidekick_fit**：`high`
+**identity_fit**：`high`
 **rendering_stylization**：`high`
 **character_transformation_strength**：`4/5`
 **costume_transformation_strength**：`4/5`
@@ -174,7 +174,7 @@
 ## S034｜Minimal Business Editorial
 
 **中文名**：极简商业编辑角色
-**sidekick_fit**：`high`
+**identity_fit**：`high`
 **rendering_stylization**：`high`
 **character_transformation_strength**：`4/5`
 **costume_transformation_strength**：`4/5`
@@ -191,10 +191,10 @@
 **expression_rule**：不得复制参考照瞬时表情；按 matched personality 动态生成表情、视线和头部姿态。
 **anti_collapse**：do not drift into realistic fashion illustration or corporate stock art；同时必须体现本条特有的 `clean corporate-adjacent shapes without corporate blandness`，不能只换颜色。
 
-## S035｜Paper-Cut Editorial Mascot
+## S035｜Paper-Cut Editorial Character
 
 **中文名**：纸切编辑角色
-**sidekick_fit**：`high`
+**identity_fit**：`high`
 **rendering_stylization**：`high`
 **character_transformation_strength**：`4/5`
 **costume_transformation_strength**：`4/5`
@@ -214,7 +214,7 @@
 ## S036｜Monochrome Luxury Editorial
 
 **中文名**：黑白奢感编辑角色
-**sidekick_fit**：`high`
+**identity_fit**：`high`
 **rendering_stylization**：`high`
 **character_transformation_strength**：`4/5`
 **costume_transformation_strength**：`4/5`
@@ -234,7 +234,7 @@
 ## S037｜Bold Shape Op-Ed Character
 
 **中文名**：大色块观点角色
-**sidekick_fit**：`high`
+**identity_fit**：`high`
 **rendering_stylization**：`high`
 **character_transformation_strength**：`4/5`
 **costume_transformation_strength**：`4/5`
@@ -254,7 +254,7 @@
 ## S038｜Soft Grain Editorial
 
 **中文名**：柔颗粒编辑角色
-**sidekick_fit**：`high`
+**identity_fit**：`high`
 **rendering_stylization**：`high`
 **character_transformation_strength**：`4/5`
 **costume_transformation_strength**：`4/5`
@@ -274,7 +274,7 @@
 ## S039｜Architectural Figure Illustration
 
 **中文名**：建筑感角色插画
-**sidekick_fit**：`high`
+**identity_fit**：`high`
 **rendering_stylization**：`high`
 **character_transformation_strength**：`4/5`
 **costume_transformation_strength**：`4/5`

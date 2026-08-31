@@ -34,7 +34,7 @@
 ## S040｜Zine Punk Character
 
 **中文名**：独立 Zine 朋克角色
-**sidekick_fit**：`medium-high`
+**identity_fit**：`medium-high`
 **rendering_stylization**：`very-high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`4/5`
@@ -54,7 +54,7 @@
 ## S041｜Riso Pop Character
 
 **中文名**：Riso 孔版角色
-**sidekick_fit**：`medium-high`
+**identity_fit**：`medium-high`
 **rendering_stylization**：`very-high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`4/5`
@@ -71,10 +71,10 @@
 **expression_rule**：不得复制参考照瞬时表情；按 matched personality 动态生成表情、视线和头部姿态。
 **anti_collapse**：preserve print-process evidence; do not clean into vector art；同时必须体现本条特有的 `limited inks, misregistration, tactile indie print`，不能只换颜色。
 
-## S042｜Xerox Grunge Mascot
+## S042｜Xerox Grunge Character
 
 **中文名**：复印机颗粒角色
-**sidekick_fit**：`medium-high`
+**identity_fit**：`medium-high`
 **rendering_stylization**：`very-high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`4/5`
@@ -94,7 +94,7 @@
 ## S043｜Duo-Tone Screenprint Figure
 
 **中文名**：双色丝网印刷角色
-**sidekick_fit**：`medium-high`
+**identity_fit**：`medium-high`
 **rendering_stylization**：`very-high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`4/5`
@@ -114,7 +114,7 @@
 ## S044｜Modern Linocut Character
 
 **中文名**：现代橡皮版画角色
-**sidekick_fit**：`medium-high`
+**identity_fit**：`medium-high`
 **rendering_stylization**：`very-high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`4/5`
@@ -131,10 +131,10 @@
 **expression_rule**：不得复制参考照瞬时表情；按 matched personality 动态生成表情、视线和头部姿态。
 **anti_collapse**：preserve print-process evidence; do not clean into vector art；同时必须体现本条特有的 `carved marks, chunky black forms, handmade force`，不能只换颜色。
 
-## S045｜Contemporary Woodcut Mascot
+## S045｜Contemporary Woodcut Character
 
 **中文名**：现代木刻角色
-**sidekick_fit**：`medium-high`
+**identity_fit**：`medium-high`
 **rendering_stylization**：`very-high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`4/5`
@@ -154,7 +154,7 @@
 ## S046｜Newsprint Halftone Figure
 
 **中文名**：报纸网点角色
-**sidekick_fit**：`medium-high`
+**identity_fit**：`medium-high`
 **rendering_stylization**：`very-high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`4/5`
@@ -174,7 +174,7 @@
 ## S047｜Photocopy Collage Character
 
 **中文名**：复印拼贴角色
-**sidekick_fit**：`medium-high`
+**identity_fit**：`medium-high`
 **rendering_stylization**：`very-high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`4/5`
@@ -194,7 +194,7 @@
 ## S048｜Indie Comic Zine
 
 **中文名**：独立漫画小志
-**sidekick_fit**：`medium-high`
+**identity_fit**：`medium-high`
 **rendering_stylization**：`very-high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`4/5`
@@ -211,10 +211,10 @@
 **expression_rule**：不得复制参考照瞬时表情；按 matched personality 动态生成表情、视线和头部姿态。
 **anti_collapse**：preserve print-process evidence; do not clean into vector art；同时必须体现本条特有的 `rough panel-drawing language, personal authorial line`，不能只换颜色。
 
-## S049｜Rubber-Stamp Mascot
+## S049｜Rubber-Stamp Character
 
 **中文名**：橡皮章角色
-**sidekick_fit**：`medium-high`
+**identity_fit**：`medium-high`
 **rendering_stylization**：`very-high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`4/5`
@@ -234,7 +234,7 @@
 ## S050｜Stencil Poster Character
 
 **中文名**：模板喷绘角色
-**sidekick_fit**：`medium-high`
+**identity_fit**：`medium-high`
 **rendering_stylization**：`very-high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`4/5`
@@ -251,10 +251,10 @@
 **expression_rule**：不得复制参考照瞬时表情；按 matched personality 动态生成表情、视线和头部姿态。
 **anti_collapse**：preserve print-process evidence; do not clean into vector art；同时必须体现本条特有的 `hard stencil cutouts, strong negative space, street-poster feel`，不能只换颜色。
 
-## S051｜Punk Flyer Cutout Mascot
+## S051｜Punk Flyer Cutout Character
 
 **中文名**：朋克传单剪贴角色
-**sidekick_fit**：`medium-high`
+**identity_fit**：`medium-high`
 **rendering_stylization**：`very-high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`4/5`

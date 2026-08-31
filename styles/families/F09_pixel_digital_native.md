@@ -34,7 +34,7 @@
 ## S103｜Pixel Web Character
 
 **中文名**：像素网络角色
-**sidekick_fit**：`low-medium`
+**identity_fit**：`low-medium`
 **rendering_stylization**：`extreme`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`4/5`
@@ -54,7 +54,7 @@
 ## S104｜16-Bit Portrait Sprite
 
 **中文名**：16位角色精灵
-**sidekick_fit**：`low-medium`
+**identity_fit**：`low-medium`
 **rendering_stylization**：`extreme`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`4/5`
@@ -71,10 +71,10 @@
 **expression_rule**：不得复制参考照瞬时表情；按 matched personality 动态生成表情、视线和头部姿态。
 **anti_collapse**：do not become generic game NPC; keep personal avatar cues；同时必须体现本条特有的 `richer pixel shading, console-era body/face abstraction`，不能只换颜色。
 
-## S105｜8-Bit Micro Mascot
+## S105｜8-Bit Micro Character
 
 **中文名**：8位极简小人
-**sidekick_fit**：`low-medium`
+**identity_fit**：`low-medium`
 **rendering_stylization**：`extreme`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`4/5`
@@ -94,7 +94,7 @@
 ## S106｜Isometric Pixel Avatar
 
 **中文名**：等距像素角色
-**sidekick_fit**：`low-medium`
+**identity_fit**：`low-medium`
 **rendering_stylization**：`extreme`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`4/5`
@@ -114,7 +114,7 @@
 ## S107｜Handheld Console Sprite
 
 **中文名**：掌机精灵角色
-**sidekick_fit**：`low-medium`
+**identity_fit**：`low-medium`
 **rendering_stylization**：`extreme`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`4/5`
@@ -133,15 +133,15 @@
 
 ## S108｜Pixel Fashion Doll
 
-**中文名**：像素时装娃娃吉祥物版
-**sidekick_fit**：`low-medium`
+**中文名**：像素时装娃娃人物IP版
+**identity_fit**：`low-medium`
 **rendering_stylization**：`extreme`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`4/5`
 **expression_capacity**：`medium`
 **body_topology_window**：`3.2–4.6 heads`
 **character_rendering_mode**：`pixel-digital-translated`
-**visual_thesis**：dress-up-game silhouette but mascot age and IP proportions
+**visual_thesis**：dress-up-game silhouette but character age and IP proportions
 **texture / line**：pixel/voxel/low-poly/dither logic
 **palette_logic**：limited digital palette
 **outfit_logic**：simplified digital clothing blocks
@@ -149,12 +149,12 @@
 **character_translation_rule**：保留参考角色参考中的整体头部识别感与年龄感；按本 style 的 visual thesis 重绘五官、头发与面部材质；可以适度放大高辨识度特征，但不得提高摄影写实度。
 **reference_costume_rule**：参考图服装默认只作为弱审美信号；除非用户明确要求，不复制源图服装、颜色或制服结构到本风格。
 **expression_rule**：不得复制参考照瞬时表情；按 matched personality 动态生成表情、视线和头部姿态。
-**anti_collapse**：do not become generic game NPC; keep personal avatar cues；同时必须体现本条特有的 `dress-up-game silhouette but mascot age and IP proportions`，不能只换颜色。
+**anti_collapse**：do not become generic game NPC; keep personal avatar cues；同时必须体现本条特有的 `dress-up-game silhouette but character age and IP proportions`，不能只换颜色。
 
 ## S109｜Low-Poly Game Avatar
 
 **中文名**：低多边形游戏头像
-**sidekick_fit**：`low-medium`
+**identity_fit**：`low-medium`
 **rendering_stylization**：`extreme`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`4/5`
@@ -171,10 +171,10 @@
 **expression_rule**：不得复制参考照瞬时表情；按 matched personality 动态生成表情、视线和头部姿态。
 **anti_collapse**：do not become generic game NPC; keep personal avatar cues；同时必须体现本条特有的 `faceted geometry, intentionally simple 3D digital body`，不能只换颜色。
 
-## S110｜Voxel Mascot IP
+## S110｜Voxel Character IP
 
 **中文名**：体素角色 IP
-**sidekick_fit**：`low-medium`
+**identity_fit**：`low-medium`
 **rendering_stylization**：`extreme`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`4/5`
@@ -194,7 +194,7 @@
 ## S111｜Dithered VGA Portrait
 
 **中文名**：VGA 抖色角色
-**sidekick_fit**：`low-medium`
+**identity_fit**：`low-medium`
 **rendering_stylization**：`extreme`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`4/5`
@@ -211,10 +211,10 @@
 **expression_rule**：不得复制参考照瞬时表情；按 matched personality 动态生成表情、视线和头部姿态。
 **anti_collapse**：do not become generic game NPC; keep personal avatar cues；同时必须体现本条特有的 `dither patterns, old-PC palette, graphic digital texture`，不能只换颜色。
 
-## S112｜Terminal-Grid Mascot
+## S112｜Terminal-Grid Character
 
 **中文名**：终端网格角色
-**sidekick_fit**：`low-medium`
+**identity_fit**：`low-medium`
 **rendering_stylization**：`extreme`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`4/5`
@@ -234,7 +234,7 @@
 ## S113｜Bitmap Web Icon Character
 
 **中文名**：位图网页图标角色
-**sidekick_fit**：`low-medium`
+**identity_fit**：`low-medium`
 **rendering_stylization**：`extreme`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`4/5`
@@ -254,7 +254,7 @@
 ## S114｜Pixel Sticker Hybrid
 
 **中文名**：像素贴纸混合
-**sidekick_fit**：`low-medium`
+**identity_fit**：`low-medium`
 **rendering_stylization**：`extreme`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`4/5`

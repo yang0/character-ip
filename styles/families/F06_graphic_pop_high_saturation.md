@@ -34,7 +34,7 @@
 ## S065｜Memphis Pop Character
 
 **中文名**：孟菲斯 Pop 角色
-**sidekick_fit**：`medium-high`
+**identity_fit**：`medium-high`
 **rendering_stylization**：`very-high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`5/5`
@@ -51,10 +51,10 @@
 **expression_rule**：不得复制参考照瞬时表情；按 matched personality 动态生成表情、视线和头部姿态。
 **anti_collapse**：avoid same generic Korean pop look; subtype geometry must dominate；同时必须体现本条特有的 `squiggles, geometric accents, playful 80s-inspired energy`，不能只换颜色。
 
-## S066｜Neo-Pop Vector Mascot
+## S066｜Neo-Pop Vector Character
 
 **中文名**：新流行矢量角色
-**sidekick_fit**：`medium-high`
+**identity_fit**：`medium-high`
 **rendering_stylization**：`very-high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`5/5`
@@ -74,7 +74,7 @@
 ## S067｜Candy Color-Block Character
 
 **中文名**：糖果撞色角色
-**sidekick_fit**：`medium-high`
+**identity_fit**：`medium-high`
 **rendering_stylization**：`very-high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`5/5`
@@ -94,7 +94,7 @@
 ## S068｜Comic Splash Pop
 
 **中文名**：漫画爆破 Pop
-**sidekick_fit**：`medium-high`
+**identity_fit**：`medium-high`
 **rendering_stylization**：`very-high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`5/5`
@@ -114,7 +114,7 @@
 ## S069｜Bold Sticker Pop
 
 **中文名**：粗边贴纸 Pop
-**sidekick_fit**：`medium-high`
+**identity_fit**：`medium-high`
 **rendering_stylization**：`very-high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`5/5`
@@ -134,7 +134,7 @@
 ## S070｜Neon Flat Graphic
 
 **中文名**：霓虹扁平角色
-**sidekick_fit**：`medium-high`
+**identity_fit**：`medium-high`
 **rendering_stylization**：`very-high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`5/5`
@@ -154,7 +154,7 @@
 ## S071｜Primary Color Modernist
 
 **中文名**：三原色现代角色
-**sidekick_fit**：`medium-high`
+**identity_fit**：`medium-high`
 **rendering_stylization**：`very-high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`5/5`
@@ -171,10 +171,10 @@
 **expression_rule**：不得复制参考照瞬时表情；按 matched personality 动态生成表情、视线和头部姿态。
 **anti_collapse**：avoid same generic Korean pop look; subtype geometry must dominate；同时必须体现本条特有的 `red-blue-yellow structure, crisp simple geometry`，不能只换颜色。
 
-## S072｜Psychedelic Flat Mascot
+## S072｜Psychedelic Flat Character
 
 **中文名**：迷幻扁平角色
-**sidekick_fit**：`medium-high`
+**identity_fit**：`medium-high`
 **rendering_stylization**：`very-high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`5/5`
@@ -194,7 +194,7 @@
 ## S073｜Sport Graphic Character
 
 **中文名**：运动视觉角色
-**sidekick_fit**：`medium-high`
+**identity_fit**：`medium-high`
 **rendering_stylization**：`very-high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`5/5`
@@ -211,10 +211,10 @@
 **expression_rule**：不得复制参考照瞬时表情；按 matched personality 动态生成表情、视线和头部姿态。
 **anti_collapse**：avoid same generic Korean pop look; subtype geometry must dominate；同时必须体现本条特有的 `jersey-poster geometry without literal sports uniform, dynamic blocking`，不能只换颜色。
 
-## S074｜Toy-Packaging Graphic Mascot
+## S074｜Toy-Packaging Graphic Character
 
 **中文名**：玩具包装图形角色
-**sidekick_fit**：`medium-high`
+**identity_fit**：`medium-high`
 **rendering_stylization**：`very-high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`5/5`
@@ -234,7 +234,7 @@
 ## S075｜Bubble Pop Character
 
 **中文名**：泡泡 Pop 角色
-**sidekick_fit**：`medium-high`
+**identity_fit**：`medium-high`
 **rendering_stylization**：`very-high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`5/5`
@@ -254,7 +254,7 @@
 ## S076｜Futuristic Shape Pop
 
 **中文名**：未来图形 Pop
-**sidekick_fit**：`medium-high`
+**identity_fit**：`medium-high`
 **rendering_stylization**：`very-high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`5/5`
@@ -274,7 +274,7 @@
 ## S077｜Electric Poster Character
 
 **中文名**：电感海报角色
-**sidekick_fit**：`medium-high`
+**identity_fit**：`medium-high`
 **rendering_stylization**：`very-high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`5/5`

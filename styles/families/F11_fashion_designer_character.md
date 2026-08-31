@@ -34,7 +34,7 @@
 ## S128｜Designer Fashion Figure
 
 **中文名**：设计师时装角色
-**sidekick_fit**：`high`
+**identity_fit**：`high`
 **rendering_stylization**：`high`
 **character_transformation_strength**：`4/5`
 **costume_transformation_strength**：`5/5`
@@ -54,7 +54,7 @@
 ## S129｜Streetwear Lookbook Illustration
 
 **中文名**：街头 Lookbook 角色
-**sidekick_fit**：`high`
+**identity_fit**：`high`
 **rendering_stylization**：`high`
 **character_transformation_strength**：`4/5`
 **costume_transformation_strength**：`5/5`
@@ -74,7 +74,7 @@
 ## S130｜Luxury Minimal Figure
 
 **中文名**：轻奢极简角色
-**sidekick_fit**：`high`
+**identity_fit**：`high`
 **rendering_stylization**：`high`
 **character_transformation_strength**：`4/5`
 **costume_transformation_strength**：`5/5`
@@ -91,10 +91,10 @@
 **expression_rule**：不得复制参考照瞬时表情；按 matched personality 动态生成表情、视线和头部姿态。
 **anti_collapse**：fashion attitude without realistic model anatomy; max 6 heads；同时必须体现本条特有的 `restrained palette, premium tailoring, quiet confidence`，不能只换颜色。
 
-## S131｜Techwear Graphic Mascot
+## S131｜Techwear Graphic Character
 
 **中文名**：机能图形角色
-**sidekick_fit**：`high`
+**identity_fit**：`high`
 **rendering_stylization**：`high`
 **character_transformation_strength**：`4/5`
 **costume_transformation_strength**：`5/5`
@@ -114,14 +114,14 @@
 ## S132｜Preppy Editorial Character
 
 **中文名**：学院编辑角色
-**sidekick_fit**：`high`
+**identity_fit**：`high`
 **rendering_stylization**：`high`
 **character_transformation_strength**：`4/5`
 **costume_transformation_strength**：`5/5`
 **expression_capacity**：`medium`
 **body_topology_window**：`4.7–5.8 heads`
 **character_rendering_mode**：`designer-character-translated`
-**visual_thesis**：clean preppy layers, polished but playful mascot vibe
+**visual_thesis**：clean preppy layers, polished but playful character vibe
 **texture / line**：stylized editorial/fashion rendering, not photo-real
 **palette_logic**：style-led fashion palette
 **outfit_logic**：strong garment language while remaining prop-free
@@ -129,12 +129,12 @@
 **character_translation_rule**：保留参考角色参考中的整体头部识别感与年龄感；按本 style 的 visual thesis 重绘五官、头发与面部材质；可以适度放大高辨识度特征，但不得提高摄影写实度。
 **reference_costume_rule**：参考图服装默认只作为弱审美信号；除非用户明确要求，不复制源图服装、颜色或制服结构到本风格。
 **expression_rule**：不得复制参考照瞬时表情；按 matched personality 动态生成表情、视线和头部姿态。
-**anti_collapse**：fashion attitude without realistic model anatomy; max 6 heads；同时必须体现本条特有的 `clean preppy layers, polished but playful mascot vibe`，不能只换颜色。
+**anti_collapse**：fashion attitude without realistic model anatomy; max 6 heads；同时必须体现本条特有的 `clean preppy layers, polished but playful character vibe`，不能只换颜色。
 
 ## S133｜Workwear Heritage Illustration
 
 **中文名**：复古工装角色
-**sidekick_fit**：`high`
+**identity_fit**：`high`
 **rendering_stylization**：`high`
 **character_transformation_strength**：`4/5`
 **costume_transformation_strength**：`5/5`
@@ -154,14 +154,14 @@
 ## S134｜Sports-Luxe Character
 
 **中文名**：运动轻奢角色
-**sidekick_fit**：`high`
+**identity_fit**：`high`
 **rendering_stylization**：`high`
 **character_transformation_strength**：`4/5`
 **costume_transformation_strength**：`5/5`
 **expression_capacity**：`medium`
 **body_topology_window**：`4.7–5.8 heads`
 **character_rendering_mode**：`designer-character-translated`
-**visual_thesis**：athletic tailoring, graphic stripes, mascot leisure confidence
+**visual_thesis**：athletic tailoring, graphic stripes, character leisure confidence
 **texture / line**：stylized editorial/fashion rendering, not photo-real
 **palette_logic**：style-led fashion palette
 **outfit_logic**：strong garment language while remaining prop-free
@@ -169,12 +169,12 @@
 **character_translation_rule**：保留参考角色参考中的整体头部识别感与年龄感；按本 style 的 visual thesis 重绘五官、头发与面部材质；可以适度放大高辨识度特征，但不得提高摄影写实度。
 **reference_costume_rule**：参考图服装默认只作为弱审美信号；除非用户明确要求，不复制源图服装、颜色或制服结构到本风格。
 **expression_rule**：不得复制参考照瞬时表情；按 matched personality 动态生成表情、视线和头部姿态。
-**anti_collapse**：fashion attitude without realistic model anatomy; max 6 heads；同时必须体现本条特有的 `athletic tailoring, graphic stripes, mascot leisure confidence`，不能只换颜色。
+**anti_collapse**：fashion attitude without realistic model anatomy; max 6 heads；同时必须体现本条特有的 `athletic tailoring, graphic stripes, character leisure confidence`，不能只换颜色。
 
 ## S135｜Oversized Normcore Figure
 
 **中文名**：宽松 Normcore 角色
-**sidekick_fit**：`high`
+**identity_fit**：`high`
 **rendering_stylization**：`high`
 **character_transformation_strength**：`4/5`
 **costume_transformation_strength**：`5/5`
@@ -191,10 +191,10 @@
 **expression_rule**：不得复制参考照瞬时表情；按 matched personality 动态生成表情、视线和头部姿态。
 **anti_collapse**：fashion attitude without realistic model anatomy; max 6 heads；同时必须体现本条特有的 `oversized basics, relaxed proportions, anti-fashion cool`，不能只换颜色。
 
-## S136｜Monochrome Avant-Garde Mascot
+## S136｜Monochrome Avant-Garde Character
 
 **中文名**：黑白先锋角色
-**sidekick_fit**：`high`
+**identity_fit**：`high`
 **rendering_stylization**：`high`
 **character_transformation_strength**：`4/5`
 **costume_transformation_strength**：`5/5`
@@ -213,8 +213,8 @@
 
 ## S137｜Color-Block Fashion Adult
 
-**中文名**：撞色时装吉祥物 IP
-**sidekick_fit**：`high`
+**中文名**：撞色时装人物IP IP
+**identity_fit**：`high`
 **rendering_stylization**：`high`
 **character_transformation_strength**：`4/5`
 **costume_transformation_strength**：`5/5`
@@ -234,7 +234,7 @@
 ## S138｜Neo-Uniform Character
 
 **中文名**：新制服感角色
-**sidekick_fit**：`high`
+**identity_fit**：`high`
 **rendering_stylization**：`high`
 **character_transformation_strength**：`4/5`
 **costume_transformation_strength**：`5/5`
@@ -254,14 +254,14 @@
 ## S139｜Minimal Tailoring Avatar
 
 **中文名**：极简剪裁角色
-**sidekick_fit**：`high`
+**identity_fit**：`high`
 **rendering_stylization**：`high`
 **character_transformation_strength**：`4/5`
 **costume_transformation_strength**：`5/5`
 **expression_capacity**：`medium`
 **body_topology_window**：`4.7–5.8 heads`
 **character_rendering_mode**：`designer-character-translated`
-**visual_thesis**：short structured jacket, wide trousers, compact mascot elegance
+**visual_thesis**：short structured jacket, wide trousers, compact character elegance
 **texture / line**：stylized editorial/fashion rendering, not photo-real
 **palette_logic**：style-led fashion palette
 **outfit_logic**：strong garment language while remaining prop-free
@@ -269,12 +269,12 @@
 **character_translation_rule**：保留参考角色参考中的整体头部识别感与年龄感；按本 style 的 visual thesis 重绘五官、头发与面部材质；可以适度放大高辨识度特征，但不得提高摄影写实度。
 **reference_costume_rule**：参考图服装默认只作为弱审美信号；除非用户明确要求，不复制源图服装、颜色或制服结构到本风格。
 **expression_rule**：不得复制参考照瞬时表情；按 matched personality 动态生成表情、视线和头部姿态。
-**anti_collapse**：fashion attitude without realistic model anatomy; max 6 heads；同时必须体现本条特有的 `short structured jacket, wide trousers, compact mascot elegance`，不能只换颜色。
+**anti_collapse**：fashion attitude without realistic model anatomy; max 6 heads；同时必须体现本条特有的 `short structured jacket, wide trousers, compact character elegance`，不能只换颜色。
 
 ## S140｜Runway Caricature IP
 
 **中文名**：秀场夸张 IP
-**sidekick_fit**：`high`
+**identity_fit**：`high`
 **rendering_stylization**：`high`
 **character_transformation_strength**：`4/5`
 **costume_transformation_strength**：`5/5`

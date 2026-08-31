@@ -34,7 +34,7 @@
 ## S052｜Crayon Painterly
 
 **中文名**：蜡笔厚涂
-**sidekick_fit**：`medium-high`
+**identity_fit**：`medium-high`
 **rendering_stylization**：`high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`4/5`
@@ -54,14 +54,14 @@
 ## S053｜Soft Pencil Cute
 
 **中文名**：柔和彩铅
-**sidekick_fit**：`medium-high`
+**identity_fit**：`medium-high`
 **rendering_stylization**：`high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`4/5`
 **expression_capacity**：`high`
 **body_topology_window**：`4.0–5.5 heads`
 **character_rendering_mode**：`physical-media-translated`
-**visual_thesis**：visible pencil grain, gentle warmth, mascot cute restraint
+**visual_thesis**：visible pencil grain, gentle warmth, character cute restraint
 **texture / line**：visible physical-medium marks
 **palette_logic**：medium-specific pigments with paper/material showing through
 **outfit_logic**：simple shapes supporting medium readability
@@ -69,12 +69,12 @@
 **character_translation_rule**：保留参考角色参考中的整体头部识别感与年龄感；按本 style 的 visual thesis 重绘五官、头发与面部材质；可以适度放大高辨识度特征，但不得提高摄影写实度。
 **reference_costume_rule**：参考图服装默认只作为弱审美信号；除非用户明确要求，不复制源图服装、颜色或制服结构到本风格。
 **expression_rule**：不得复制参考照瞬时表情；按 matched personality 动态生成表情、视线和头部姿态。
-**anti_collapse**：do not digitally smooth the medium; keep head/body in same material；同时必须体现本条特有的 `visible pencil grain, gentle warmth, mascot cute restraint`，不能只换颜色。
+**anti_collapse**：do not digitally smooth the medium; keep head/body in same material；同时必须体现本条特有的 `visible pencil grain, gentle warmth, character cute restraint`，不能只换颜色。
 
 ## S054｜Healing Line Art
 
 **中文名**：治愈线稿
-**sidekick_fit**：`medium-high`
+**identity_fit**：`medium-high`
 **rendering_stylization**：`high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`4/5`
@@ -94,7 +94,7 @@
 ## S055｜Oil Pastel Portrait Character
 
 **中文名**：油画棒角色
-**sidekick_fit**：`medium-high`
+**identity_fit**：`medium-high`
 **rendering_stylization**：`high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`4/5`
@@ -114,7 +114,7 @@
 ## S056｜Marker Fashion Sketch
 
 **中文名**：马克笔时装角色
-**sidekick_fit**：`medium-high`
+**identity_fit**：`medium-high`
 **rendering_stylization**：`high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`4/5`
@@ -131,10 +131,10 @@
 **expression_rule**：不得复制参考照瞬时表情；按 matched personality 动态生成表情、视线和头部姿态。
 **anti_collapse**：do not digitally smooth the medium; keep head/body in same material；同时必须体现本条特有的 `broad marker swaths, quick fashion sketch energy, compact IP proportions`，不能只换颜色。
 
-## S057｜Loose Watercolor Mascot
+## S057｜Loose Watercolor Character
 
 **中文名**：松散水彩角色
-**sidekick_fit**：`medium-high`
+**identity_fit**：`medium-high`
 **rendering_stylization**：`high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`4/5`
@@ -154,7 +154,7 @@
 ## S058｜Flat Gouache Character
 
 **中文名**：平涂水粉角色
-**sidekick_fit**：`medium-high`
+**identity_fit**：`medium-high`
 **rendering_stylization**：`high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`4/5`
@@ -174,14 +174,14 @@
 ## S059｜Charcoal Gesture Character
 
 **中文名**：炭笔动态角色
-**sidekick_fit**：`medium-high`
+**identity_fit**：`medium-high`
 **rendering_stylization**：`high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`4/5`
 **expression_capacity**：`high`
 **body_topology_window**：`4.0–5.5 heads`
 **character_rendering_mode**：`physical-media-translated`
-**visual_thesis**：smudged charcoal mass, expressive contour, mascot mood
+**visual_thesis**：smudged charcoal mass, expressive contour, character mood
 **texture / line**：visible physical-medium marks
 **palette_logic**：medium-specific pigments with paper/material showing through
 **outfit_logic**：simple shapes supporting medium readability
@@ -189,12 +189,12 @@
 **character_translation_rule**：保留参考角色参考中的整体头部识别感与年龄感；按本 style 的 visual thesis 重绘五官、头发与面部材质；可以适度放大高辨识度特征，但不得提高摄影写实度。
 **reference_costume_rule**：参考图服装默认只作为弱审美信号；除非用户明确要求，不复制源图服装、颜色或制服结构到本风格。
 **expression_rule**：不得复制参考照瞬时表情；按 matched personality 动态生成表情、视线和头部姿态。
-**anti_collapse**：do not digitally smooth the medium; keep head/body in same material；同时必须体现本条特有的 `smudged charcoal mass, expressive contour, mascot mood`，不能只换颜色。
+**anti_collapse**：do not digitally smooth the medium; keep head/body in same material；同时必须体现本条特有的 `smudged charcoal mass, expressive contour, character mood`，不能只换颜色。
 
 ## S060｜Graphite Notebook Figure
 
 **中文名**：铅笔本速写
-**sidekick_fit**：`medium-high`
+**identity_fit**：`medium-high`
 **rendering_stylization**：`high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`4/5`
@@ -211,10 +211,10 @@
 **expression_rule**：不得复制参考照瞬时表情；按 matched personality 动态生成表情、视线和头部姿态。
 **anti_collapse**：do not digitally smooth the medium; keep head/body in same material；同时必须体现本条特有的 `graphite hatching, eraser ghosts, intimate observational drawing`，不能只换颜色。
 
-## S061｜Pen-and-Wash Mascot
+## S061｜Pen-and-Wash Character
 
 **中文名**：钢笔淡彩角色
-**sidekick_fit**：`medium-high`
+**identity_fit**：`medium-high`
 **rendering_stylization**：`high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`4/5`
@@ -234,7 +234,7 @@
 ## S062｜Chalk Texture Character
 
 **中文名**：粉笔质感角色
-**sidekick_fit**：`medium-high`
+**identity_fit**：`medium-high`
 **rendering_stylization**：`high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`4/5`
@@ -251,10 +251,10 @@
 **expression_rule**：不得复制参考照瞬时表情；按 matched personality 动态生成表情、视线和头部姿态。
 **anti_collapse**：do not digitally smooth the medium; keep head/body in same material；同时必须体现本条特有的 `chalk dust edges, matte color, tactile board-like softness`，不能只换颜色。
 
-## S063｜Dry-Brush Tempera Mascot
+## S063｜Dry-Brush Tempera Character
 
 **中文名**：干刷蛋彩角色
-**sidekick_fit**：`medium-high`
+**identity_fit**：`medium-high`
 **rendering_stylization**：`high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`4/5`
@@ -273,15 +273,15 @@
 
 ## S064｜Naive Wax-Pencil Adult
 
-**中文名**：稚拙蜡笔吉祥物
-**sidekick_fit**：`medium-high`
+**中文名**：稚拙蜡笔人物IP
+**identity_fit**：`medium-high`
 **rendering_stylization**：`high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`4/5`
 **expression_capacity**：`high`
 **body_topology_window**：`4.0–5.5 heads`
 **character_rendering_mode**：`physical-media-translated`
-**visual_thesis**：intentionally naive wax-pencil marks while preserving mascot age and attitude
+**visual_thesis**：intentionally naive wax-pencil marks while preserving character age and attitude
 **texture / line**：visible physical-medium marks
 **palette_logic**：medium-specific pigments with paper/material showing through
 **outfit_logic**：simple shapes supporting medium readability
@@ -289,5 +289,5 @@
 **character_translation_rule**：保留参考角色参考中的整体头部识别感与年龄感；按本 style 的 visual thesis 重绘五官、头发与面部材质；可以适度放大高辨识度特征，但不得提高摄影写实度。
 **reference_costume_rule**：参考图服装默认只作为弱审美信号；除非用户明确要求，不复制源图服装、颜色或制服结构到本风格。
 **expression_rule**：不得复制参考照瞬时表情；按 matched personality 动态生成表情、视线和头部姿态。
-**anti_collapse**：do not digitally smooth the medium; keep head/body in same material；同时必须体现本条特有的 `intentionally naive wax-pencil marks while preserving mascot age and attitude`，不能只换颜色。
+**anti_collapse**：do not digitally smooth the medium; keep head/body in same material；同时必须体现本条特有的 `intentionally naive wax-pencil marks while preserving character age and attitude`，不能只换颜色。
 

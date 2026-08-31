@@ -34,7 +34,7 @@
 ## S090｜Retro Web Comic
 
 **中文名**：复古网络漫画
-**sidekick_fit**：`medium`
+**identity_fit**：`medium`
 **rendering_stylization**：`very-high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`5/5`
@@ -54,7 +54,7 @@
 ## S091｜Neo Y2K Cartoon
 
 **中文名**：新 Y2K 漫画
-**sidekick_fit**：`medium`
+**identity_fit**：`medium`
 **rendering_stylization**：`very-high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`5/5`
@@ -74,7 +74,7 @@
 ## S092｜90s Web Avatar
 
 **中文名**：90年代网络头像
-**sidekick_fit**：`medium`
+**identity_fit**：`medium`
 **rendering_stylization**：`very-high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`5/5`
@@ -91,10 +91,10 @@
 **expression_rule**：不得复制参考照瞬时表情；按 matched personality 动态生成表情、视线和头部姿态。
 **anti_collapse**：avoid cosplay; keep usable contemporary personal-IP identity；同时必须体现本条特有的 `small-web graphic logic, limited shading, retro digital identity`，不能只换颜色。
 
-## S093｜Desktop Clipart Mascot
+## S093｜Desktop Clipart Character
 
 **中文名**：桌面剪贴画角色
-**sidekick_fit**：`medium`
+**identity_fit**：`medium`
 **rendering_stylization**：`very-high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`5/5`
@@ -114,7 +114,7 @@
 ## S094｜Cyber-Cafe Cartoon
 
 **中文名**：网吧时代漫画
-**sidekick_fit**：`medium`
+**identity_fit**：`medium`
 **rendering_stylization**：`very-high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`5/5`
@@ -131,10 +131,10 @@
 **expression_rule**：不得复制参考照瞬时表情；按 matched personality 动态生成表情、视线和头部姿态。
 **anti_collapse**：avoid cosplay; keep usable contemporary personal-IP identity；同时必须体现本条特有的 `dark-blue digital palette, arcade-era energy, social internet nostalgia`，不能只换颜色。
 
-## S095｜Vaporwave Mascot
+## S095｜Vaporwave Character
 
 **中文名**：蒸汽波角色
-**sidekick_fit**：`medium`
+**identity_fit**：`medium`
 **rendering_stylization**：`very-high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`5/5`
@@ -154,7 +154,7 @@
 ## S096｜2000s Vector Avatar
 
 **中文名**：千禧矢量头像
-**sidekick_fit**：`medium`
+**identity_fit**：`medium`
 **rendering_stylization**：`very-high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`5/5`
@@ -174,7 +174,7 @@
 ## S097｜Flash Animation Character
 
 **中文名**：Flash 动画角色
-**sidekick_fit**：`medium`
+**identity_fit**：`medium`
 **rendering_stylization**：`very-high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`5/5`
@@ -194,7 +194,7 @@
 ## S098｜GeoCities Cartoon
 
 **中文名**：个人主页时代漫画
-**sidekick_fit**：`medium`
+**identity_fit**：`medium`
 **rendering_stylization**：`very-high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`5/5`
@@ -214,7 +214,7 @@
 ## S099｜CRT Scanline Character
 
 **中文名**：CRT 扫描线角色
-**sidekick_fit**：`medium`
+**identity_fit**：`medium`
 **rendering_stylization**：`very-high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`5/5`
@@ -231,10 +231,10 @@
 **expression_rule**：不得复制参考照瞬时表情；按 matched personality 动态生成表情、视线和头部姿态。
 **anti_collapse**：avoid cosplay; keep usable contemporary personal-IP identity；同时必须体现本条特有的 `scanline texture, monitor glow, retro screen abstraction`，不能只换颜色。
 
-## S100｜90s Digital Magazine Mascot
+## S100｜90s Digital Magazine Character
 
 **中文名**：90年代数码杂志角色
-**sidekick_fit**：`medium`
+**identity_fit**：`medium`
 **rendering_stylization**：`very-high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`5/5`
@@ -254,7 +254,7 @@
 ## S101｜Rave Flyer Cartoon
 
 **中文名**：锐舞传单漫画
-**sidekick_fit**：`medium`
+**identity_fit**：`medium`
 **rendering_stylization**：`very-high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`5/5`
@@ -271,10 +271,10 @@
 **expression_rule**：不得复制参考照瞬时表情；按 matched personality 动态生成表情、视线和头部姿态。
 **anti_collapse**：avoid cosplay; keep usable contemporary personal-IP identity；同时必须体现本条特有的 `fluorescent flyer energy, warped shapes, club-culture graphic punch`，不能只换颜色。
 
-## S102｜Chrome Pop Mascot
+## S102｜Chrome Pop Character
 
 **中文名**：铬感 Pop 角色
-**sidekick_fit**：`medium`
+**identity_fit**：`medium`
 **rendering_stylization**：`very-high`
 **character_transformation_strength**：`5/5`
 **costume_transformation_strength**：`5/5`
