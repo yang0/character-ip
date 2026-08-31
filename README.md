@@ -1,66 +1,73 @@
-# Mascot IP Prompt Studio V11
+# Character IP：把你变成一个能长期使用的 IP
 
-这是一个把你提供的 **Human Character IP Skill 的风格应用机制 1:1 移植到 Mascot 场景** 的版本。
+把账号、资料，或者一句需求交给 Codex。它会先给你一张 25 选 1 的人物 IP 海选板；看中哪个，输入编号，就能把它放大成单张精修图。
 
-## 这版的目标
+不需要会写提示词，也不需要懂画风、排版或设计软件。照着下面 4 步做就行。
 
-不是继续微调旧版 Mascot Skill，而是把“人物 IP Skill 里风格为什么更容易拉开”的那整套机制，直接照搬到拟人化 Mascot IP：
+## 你只需要准备一样东西
 
-- `Style Universe Index`
-- `Dynamic Style Selector`
-- `Selection Policy`
-- `Family Recipe`
-- `Progressive Disclosure`
-- `Board Manifest / Slot Binding`
-- `One-Shot 25 Grid Generation`
+下面任选一个发给 Codex：
 
-## 这版和人物 Skill 一样的地方
+- 一个账号链接
+- 一个资料文件夹
+- 1–3 张人物照片
+- 一句话需求，例如「为一个理性、爱讲 AI 的创作者设计人物 IP」
 
-### 1. 先读 INDEX，再选 25 个 Style ID
-不是一上来把 150 条风格全塞进 Prompt，而是：
+## 4 步开始
 
-1. 读取 `styles/INDEX.md`
-2. 先选 25 个 canonical style IDs
-3. 只读取对应 family files
-4. 提取完整 recipe
-5. 再编译 25 格 prompt
+### 1. 安装 Skill
 
-### 2. 选风格的 Mix 一模一样
-- 10 Core Fit
-- 7 Adjacent
-- 5 Exploratory
-- 3 Wildcard
+把下面这句话直接发给 Codex：
 
-### 3. Style 是真正的 Recipe，不是一个名字
-每个 style 都有完整定义，例如：
-- visual thesis
-- line / edge
-- palette logic
-- shading
-- material / texture
-- dimensionality
-- finish
-- transformation strength
-- anti-collapse
+```text
+请安装这个 Skill：https://github.com/yang0/character-ip
+```
 
-### 4. Board Manifest 机制一模一样
-先冻结 `board_id + slot 01–25 + style_recipe_snapshot`，再一次生图。生图后不允许重新排序。
+### 2. 丢给它你的素材或需求
 
-## 和人物 Skill 不一样、但已做 Mascot 化适配的地方
+账号、文件夹、照片、一句话需求都可以。直接复制一条发给 Codex：
 
-- 把 `Human / Adult / Personal IP` 改成 `Mascot / Sidekick / Account Mascot Universe`
-- style 保留“应用方式”，但字段改成适合 mascot：
-  - `sidekick_fit`
-  - `character_rendering_mode`
-  - `body_topology_window`
-  - `costume_transformation_strength`
-- 强调：
-  - 25 格是 **25 个独立 mascot 候选**，不是同一个人跨 25 种风格
-  - style 只负责 **怎么画**，不负责决定人格
-  - personality / pose / carrier 仍然是上游冻结变量
+```text
+为这个账号设计人物 IP：https://x.com/example_creator
+```
 
-## 你这版重点想看的
+```text
+为这个文件夹里的资料设计人物 IP：/你的资料文件夹
+```
 
-这版最重要的不是最终内容质量，而是看：
+```text
+设计一个人物 IP：理性、有点冷幽默、长期聊 AI 和创作的成年创作者。
+```
 
-> **把人物 Skill 那套 Style 应用系统原封不动地迁到 Mascot 后，25 宫格的画风拉开程度会不会明显变好。**
+### 3. 挑一张你最想要的
+
+Codex 会输出一张 25 宫格 IP 海选板。把它当作试衣间：不用先想清楚画风，先看哪一格最像你想成为的那个角色。
+
+![25 个 IP 候选](docs/assets/readme/ip-board-example.png)
+
+### 4. 输入编号，直接放大
+
+比如你喜欢 21 号，回复：
+
+```text
+21
+```
+
+Codex 会沿用这一格的画风、表情、服装轮廓和身体比例，输出一张可直接使用的单人 IP。
+
+| 21 号 | 17 号 | 19 号 |
+| :---: | :---: | :---: |
+| ![21号精修](docs/assets/readme/ip-selected-21.png) | ![17号精修](docs/assets/readme/ip-selected-17.png) | ![19号精修](docs/assets/readme/ip-selected-19.png) |
+
+## 适合用来做什么？
+
+- 账号头像与主页视觉
+- 文章、课程、社媒内容配图
+- 贴纸、表情包、周边的角色起点
+- 为你的个人品牌先确定一张「长期好认」的脸
+
+## 小提醒
+
+这是一个**人物 IP** Skill：适合真人、创作者、账号人格或人物主题；不用于动物、吉祥物、植物、食物或物件 IP。
+
+选中编号后还想调整？继续告诉 Codex「这个再改一下」，它会沿着你选中的方向继续精修，而不是重新抽一套画风。
